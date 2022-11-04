@@ -5,20 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>MECANIZADOS IASA</title>
 </head>
 <body>
     <!-- ENCABEZADO -->
     <header>
         <!-- LOGO -->
-        <img src="" alt="Logo">
+        <img src="" alt="Logo" class="logo">
         <!-- MENÚ DE NAVEGACIÓN -->
         <nav class="navbar">
-            <!-- MENU TOGGLE -->
-            <label for="menu-toggle" class="menu-toggle">
-                <i></i>
-            </label>
-            <input type="checkbox" id="menu-toggle">
+            
             <!-- NAVBAR LIST -->
             <ul class="navbar-list">
                 <li><a href="#">Inicio</a></li>
@@ -39,18 +36,23 @@
                 <li><a href="#">Trabajos</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
+            <!-- USUARIO -->
+            <label for="user-toggle" class="user-label">
+                <i class="fa-solid fa-user user-icon"></i>
+            </label>
+            <input type="checkbox" id="user-toggle">
+            <!-- MENU TOGGLE -->
+            <label for="menu-toggle" class="menu-label">
+                <i class="fa-solid fa-bars menu-icon"></i>
+            </label>
+            <input type="checkbox" id="menu-toggle">
+            <form action="#">
+                <h3>Iniciar Sesión</h3>
+                <input type="email" placeholder="Ingrese su email">
+                <input type="password" placeholder="Ingrese su contraseña">
+                <p class="p-link"><a href="index2.html">¿Aún no tienes cuenta?</a></p>
+            </form> 
         </nav>
-        <!-- FORMULARIO DE REGISTRO - INICIO DE SESIÓN -->
-        <form action="#">
-            <h3>Formulario de Registro</h3>
-            <input type="text" placeholder="Ingresa tu Nombre">
-            <input type="text" placeholder="Ingresa tu Apellido">
-            <input type="email" placeholder="Ingresa tu correo electrónico">
-            <input type="password" placeholder="Elige una contraseña">
-            <p class="p-acuerdo">Estoy de acuerdo con los términos y condiciones</p>
-            <button>Registrarse</button>
-            <p class="p-link"><a href="index2.html">¿Ya tienes cuenta?</a></p>
-        </form>
     </header>
     <!-- INFORMACIÓN -->
     <main>
@@ -63,7 +65,17 @@
         </section>
         <!-- NOSOTROS -->
         <section id="nosotros">
-            <p>IASA inició sus actividades realizando trabajos para terceros. Con el paso del tiempo fue ampliando la gama de actividades para convertirse en una empresa de variados servicios directos a usuarios, incorporando maquinarias de última tecnología y capacitando constantemente al personal para estar acorde con las exigencias actuales, tanto en las normas de calidad como en el cuidado del medio ambiente.</p>
+        <div class="empresa">
+            <h2>La empresa</h2>
+            <p>IASA inició sus actividades realizando trabajos para terceros. Con el paso del tiempo fue ampliando la gama de actividades para convertirse en una empresa que ofrece múltiples servicios directos a usuarios, incorporando maquinarias de última tecnología y capacitando constantemente al personal para estar acorde con las exigencias actuales, tanto en las normas de calidad como en el cuidado del medio ambiente.</p>
+        </div>
+        <div class="clientes">
+            <h2>Nuestros clientes</h2>
+            <div class="img">
+            <img src="./assets/clientes/Aluar logo.png" alt="logo Aluar"><img src="./assets/clientes/Bekaert logo.png" alt="logo Bekaert"><img src="./assets/clientes/Hillmann logo.png" alt="logo Hillmann"><img src="./assets/clientes/Klaukol logo.png" alt="logo Klaukol"><img src="./assets/clientes/Saint Gobain logo.png" alt="logo Saint Gobain"><img src="./assets/clientes/Smurfit logo.png" alt="logo Smurfit"><img src="./assets/clientes/TRP logo.png" alt="logo TRP"><img src="./assets/clientes/VASA logo.png" alt="logo VASA"><img src="./assets/clientes/zucamor logo.jpg" alt="logo Zucamor">
+        </div>
+        </div>
+
         </section>
         <!-- SERVICIOS Y PRODUCTOS -->
         <section id="servicios">
@@ -109,9 +121,11 @@
             </div>
         </section>
         <!-- INGENIERIA Y CONTROL -->
-        <section id="ingenieria">
+        <section id="ingenieria-control">
+        
             <!-- INGENIERIA -->
             <div class="ingenieria">
+                <h2>INGENIERIA</h2>
                 <ul class="ingenieria-list">
                     <li>Cálculo y proyecto de transmisiones mecánicas</li>
                     <li>Repotenciación y/o modernización de equipos</li>
@@ -127,12 +141,14 @@
             </div>
             <!-- CALIDAD -->
             <div class="calidad">
+                <h2>CALIDAD</h2>
                 <ul class="calidad-list">
                     <li>Los repuestos fabricados están sometidos a un proceso de control de calidad predeterminado durante su proceso según normas ISO, DIN, ASTM, AGMA u otras afines</li>
                     <li>Ofrecemos supervisión, seguimiento y control, tanto de los trabajos en curso como los finalizados</li>
                     <li>Las materias primas se adquieren con certificado de calidad y, en piezas críticas, son sometidad a análisis químicos y ensayos no destructivos con entrega de certificados de empresas acreditadas</li>
                 </ul>
             </div>
+        
         </section>
         <!-- TRABAJOS -->
         <section id="trabajos">
@@ -158,6 +174,7 @@
                         </ul>
                     </div>
                     <div class="telefono">
+                        <h3>Teléfonos</h3>
                         <ul>
                             <li>4289-2095</li>
                             <li>11-6595-5870</li>
@@ -166,15 +183,20 @@
                     </div>
                 </div>
                 <div class="mapa">
-                    <iframe src="" frameborder="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.5957257724663!2d-58.34851557997855!3d-34.71537541747816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33297437bd531%3A0x80d018975d65d2de!2sCnel.%20M%C3%A9ndez%201851%2C%20B1874EDK%20Wilde%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1667415033345!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
+        
+        
     </main>
+        
     <!-- PIE DE PÁGINA -->
     <footer>
+        <img src="" alt="Logo">
         <p>Ayelén Iacovelli - Todos los derechos reservados - 2022</p>
     </footer>
+    
 
 </body>
 </html>
