@@ -25,6 +25,7 @@ main{
     justify-content: center;
     width: 100%;
     background: white;
+    padding-top: 30px;
 }
 
 /* ENCABEZADO */
@@ -134,13 +135,15 @@ form .p-link{
     max-width: 1200px;
     background-image: url(./frente/frente\ ok.jpg);
     position: relative;
-    height: calc(100vh - 100px);
+    height: calc(70vh - 100px);
     background-size: cover;
     background-position: center;
     background-color: #f5f5f5;
     width: 100%;
     margin-top: 100px;
     animation: banner 30s infinite ease-in-out;
+    border-radius: 1rem;
+    
        
     
 }
@@ -154,6 +157,8 @@ form .p-link{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 1rem;
+    
 }
 
 .banner-content h1{
@@ -214,21 +219,34 @@ form .p-link{
     display: flex;
     flex-direction: column;
     max-width: 1200px;
+    padding: 40px 0;
+    justify-content: center;
+    align-items: center;
+    
+    
 }
 .empresa{
-    align-items: center;
+    
+    text-align: justify;
+    width: 90%;
 }
 .empresa h2,
-.clientes h2{
+.clientes h2,
+#servicios h2,
+#ingenieria-control h2{
     text-align: center;
+    padding-bottom: 10px;
+    font-size: 30px;
 }
 .empresa p{
-    font-size: 28px;
+    padding: 30px 0;
+    font-size: 24px;
     color: green;    
 }
 
 .clientes{
-    align-items: center;    
+    align-items: center;
+    padding-top: 40px;    
 }
 
 .img{
@@ -237,8 +255,8 @@ form .p-link{
     gap: 30px;
 }
 .clientes img{
-    width: 90px;
-    height: 60px;
+    width: 100px;
+    height: 70px;
     object-fit: contain;
 
 }
@@ -246,18 +264,23 @@ form .p-link{
 /* SERVICIOS */
 #servicios{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    max-width: 1200px;   
+    max-width: 1200px;
+    padding: 30px 0;   
     
 }
 .products-container{
     display: flex;
-    gap: 7.5px;    
+    gap: 7.5px;
+    flex-wrap: wrap;
+    padding: 30px 0;   
 }
 .product{
     display: flex;
     flex-direction: column;
+    
     justify-content: space-between;
     align-items: center;
     gap: 10px;
@@ -349,7 +372,7 @@ form .p-link{
     background-position: center;
 }
 .transportadores{
-    background-image: url(./Transportadores/DSC00204\ transp\ bg.jpg);
+    background-image: url(./Transportadores/transportadora\ ok.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -357,15 +380,20 @@ form .p-link{
 /* INGENIERIA */
 #ingenieria-control{
     display: flex;
+    flex-direction: column;
     padding: 30px 0;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 30px;
     max-width: 1200px;
 
 }
-
+.ing-control{
+    display: flex;
+    gap: 20px;
+}
 .ingenieria,
 .calidad{
     display: flex;
@@ -520,7 +548,7 @@ footer{
         gap: 25px;
         z-index: 2;
         align-items: center;
-        /* display: none; */
+        display: none;
     }
     .navbar-list li ul{
         display: none;
@@ -537,6 +565,8 @@ footer{
     .menu-label{
         display: flex;
         cursor: pointer;
+        order: 2;
+        
     }
     .menu-icon{
 

@@ -17,37 +17,36 @@
         <nav class="navbar">
             <!-- LOGO -->
             <img src="" alt="Logo" class="logo">
-            
-            <!-- NAVBAR LIST -->
-            <ul class="navbar-list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a>
-                    <ul>
-                        <li><a href="#">La Empresa</a></li>
-                        <li><a href="#">Clientes</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Servicios | Productos</a>
-                    <ul>
-                        <li><a href="#">Mecanizados</a></li>
-                        <li><a href="#">Transmisiones</a></li>
-                        <li><a href="#">Transportadores</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Ingeniería | Control</a></li>
-                <li><a href="#">Trabajos</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-            <!-- USUARIO -->
-            <label for="user-toggle" class="user-label">
-                <i class="fa-solid fa-user user-icon"></i>
-            </label>
-            <input type="checkbox" id="user-toggle">
             <!-- MENU TOGGLE -->
             <label for="menu-toggle" class="menu-label">
                 <i class="fa-solid fa-bars menu-icon"></i>
             </label>
             <input type="checkbox" id="menu-toggle">
+            <!-- NAVBAR LIST -->
+            <ul class="navbar-list">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a>
+                    <ul>
+                        <li><a href="#nosotros">La Empresa</a></li>
+                        <li><a href="#nosotros">Clientes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#servicios">Servicios | Productos</a>
+                    <ul>
+                        <li><a href="index3.html" >Mecanizados</a></li>
+                        <li><a href="index4.html">Transmisiones</a></li>
+                        <li><a href="index5.html">Transportadores</a></li>
+                    </ul>
+                </li>
+                <li><a href="#ingenieria-control">Ingeniería | Control</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <!-- USUARIO --> 
+            <label for="user-toggle" class="user-label">
+                <i class="fa-solid fa-user"></i>
+            </label>
+            <input type="checkbox" id="user-toggle">
+            
             <form action="#">
                 <h3>Iniciar Sesión</h3>
                 <input type="email" placeholder="Ingrese su email">
@@ -80,6 +79,7 @@
         </section>
         <!-- SERVICIOS Y PRODUCTOS -->
         <section id="servicios">
+            <h2>Servicios | Productos</h2>
             <div class="products-container">
                 <!-- MECANIZADOS -->
                 <div class="product mecanizados">
@@ -120,7 +120,8 @@
         </section>
         <!-- INGENIERIA Y CONTROL -->
         <section id="ingenieria-control">
-        
+            <h2>Ingeniería | Control</h2>
+            <div class="ing-control">
             <!-- INGENIERIA -->
             <div class="ingenieria">
                 <h2>INGENIERIA</h2>
@@ -146,6 +147,7 @@
                     <li>Las materias primas se adquieren con certificado de calidad y, en piezas críticas, son sometidad a análisis químicos y ensayos no destructivos con entrega de certificados de empresas acreditadas.</li>
                 </ul>
             </div>
+        </div>
         
         </section>
         <!-- TRABAJOS -->
