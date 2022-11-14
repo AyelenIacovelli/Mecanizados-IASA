@@ -1,0 +1,124 @@
+/* @import;
+
+:root{
+
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: white;
+    padding-top: 30px;
+}
+
+/* ENCABEZADO */
+header{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.logo{
+    height: 80px;
+    object-fit: scale-down;
+
+}
+/* NAVBAR */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+/* .navbar-list{
+   
+} */
+
+.navbar-list li a{
+    background: black;
+    color: white;
+    padding: 6px 8px;
+    display: block;
+}
+.navbar-list li a:hover{
+    background: grey;
+}
+.navbar-list li{
+    float: left;
+    position: relative;
+    width: 130px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.navbar-list li ul{
+    display: none;
+    position: absolute;
+    min-width: 130px;
+}
+.navbar-list li:hover > ul{
+    display: block;
+}
+/* MENU HAMBURGUESA */
+.menu-icon{
+    color: grey;
+    font-size: 25px;
+    
+}
+
+.menu-label,
+#menu-toggle{
+    display: none;
+}
+/* USUARIO */
+
+.background{
+    background-image: url(./frente\ ok.jpg);
+    height: calc(100vh - 100px);
+    width: 100%;
+    max-width: 1200px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 100px;
+}
+
+form{
+    
+    background: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    height: 60vh;
+    
+}
+
+

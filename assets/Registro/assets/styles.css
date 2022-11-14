@@ -1,0 +1,182 @@
+/* @import;
+
+:root{
+
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* background: gray; */
+    padding-top: 30px;
+}
+
+
+/* ENCABEZADO */
+header{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.logo{
+    height: 80px;
+    object-fit: scale-down;
+
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+/* .navbar-list{
+   
+} */
+
+.navbar-list li a{
+    background: white;
+    color: black;
+    padding: 6px 8px;
+    display: block;
+}
+.navbar-list li a:hover{
+    background: grey;
+}
+.navbar-list li{
+    float: left;
+    position: relative;
+    width: 130px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.navbar-list li ul{
+    display: none;
+    position: absolute;
+    min-width: 130px;
+}
+.navbar-list li:hover > ul{
+    display: block;
+}
+/* MENU HAMBURGUESA */
+.menu-icon{
+    color: grey;
+    font-size: 25px;
+    
+}
+
+.menu-label,
+#menu-toggle{
+    display: none;
+}
+
+.background{
+    background-image: url(./Imagen\ 004.jpg);
+    height: calc(100vh - 200px);
+    width: 100%;
+    max-width: 1200px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 100px;
+    border-radius: 1rem;
+}
+form{
+    
+    background: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: wheat;
+}
+form input{
+    width: 319px;
+    height: 20px;
+    padding: 5px 6px;
+    /* margin-bottom: 8px; */
+    border: none;
+    outline: none;
+    border-radius: 7px;
+}
+.acuerdo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 319px;
+}
+.acuerdo input{
+    width: unset;
+}
+.a-acuerdo{
+    color: beige;
+    padding: 0 4px;
+    
+    text-align: justify;
+
+}
+form button{
+    width: 319px;
+    height: 40px;
+    background: yellowgreen;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    color: orangered;
+    
+}
+
+/* PIE DE PAGINA */
+footer{
+    background: white;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    
+}
+footer p{
+    color: black;
+}
