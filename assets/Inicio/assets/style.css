@@ -98,7 +98,7 @@ header{
 
 .background{
     background-image: url(./frente\ ok.jpg);
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
     width: 100%;
     max-width: 1200px;
     background-size: cover;
@@ -119,6 +119,18 @@ form{
     margin-top: 100px;
     height: 60vh;
     
+}
+footer{
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    gap: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 

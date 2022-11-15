@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: ;
+    /* font-family: ; */
     text-decoration: none;
     list-style: none;
 }
@@ -258,9 +258,9 @@ main{
     right: 0;
     top: calc(50vh - 100px);
 }
-.img a:last-child{
+/* .img a:last-child{
    
-}
+} */
 
 .img img{
     max-height: 470px;
