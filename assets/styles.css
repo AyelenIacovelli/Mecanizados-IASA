@@ -1,17 +1,20 @@
- @import;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
     --gris: rgb(125, 124, 124);
     --blanco: rgb(247, 242, 242);
-    --rojo: rgb(181, 16, 16);
+    --rojo: rgb(199, 46, 46);
     --negro: rgb(0, 0, 0);
-} 
+    --bg-footer: rgba(247, 242, 242, 0.8);
+    --bg-gris: rgb(192, 192, 192);
+    --bg-negro: rgba(0, 0, 0, 0.8);
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: ;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     list-style: none;
 }
@@ -19,7 +22,7 @@
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
-    
+
 }
 
 main{
@@ -29,21 +32,23 @@ main{
     justify-content: center;
     width: 100%;
     padding-top: 30px;
+    background: var(--blanco);
 }
 
 /* ENCABEZADO */
 header{
-    background-color: var(--negro);
+    background-color: var(--blanco);
     width: 100%;
     display: flex;
     justify-content: center;
-    
+
     align-items: center;
     height: 100px;
     padding: 0 30px;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
+    border-bottom: 1px solid var(--gris);
 }
 .logo{
     height: 80px;
@@ -60,16 +65,17 @@ header{
 }
 .navbar-list{
     display: flex;
+
 }
 
 .navbar-list li a{
-    background: black;
-    color: white;
+    background: none;
+    color: var(--gris);
     padding: 6px 8px;
     display: block;
 }
 .navbar-list li a:hover{
-    background: grey;
+    background: var(--blanco);
 }
 .navbar-list li{
     float: left;
@@ -83,6 +89,7 @@ header{
     display: none;
     position: absolute;
     min-width: 130px;
+    background: var(--blanco);
 }
 .navbar-list li:hover > ul{
     display: block;
@@ -91,7 +98,7 @@ header{
 .menu-icon{
     color: grey;
     font-size: 25px;
-    
+
 }
 
 .menu-label,
@@ -100,27 +107,29 @@ header{
 }
 
 
-section{
+/* section{
     margin-top: 50px;
     margin-bottom: 50px;
-}
+} */
 /* HERO */
 
 #hero{
-    max-width: 1200px;
+    /* max-width: 1200px; */
     background-image: url(./hero/frente\ ok.jpg);
     position: relative;
-    height: calc(70vh - 100px);
+    /* height: calc(100vh - 100px); */
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-color: #f5f5f5;
     width: 100%;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     animation: banner 30s infinite ease-in-out;
-    border-radius: 1rem;
-    
-       
-    
+    /* border-radius: 1rem; */
+
+
+
+
 }
 
 .banner-content{
@@ -132,15 +141,15 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem;
-    
+    /* border-radius: 1rem; */
+
 }
 
 .banner-content h1{
     font-size: 50px;
     text-align: center;
     padding-bottom: 30px;
-    color: var(--gris);
+    color: var(--blanco);
 }
 .banner-content a{
     padding: 9px 20px;
@@ -151,14 +160,14 @@ section{
 }
 .banner-content a:hover{
     background: var(--rojo);
-    color: var(--gris);
+    color: var(--blanco);
 }
 
 
 
 @keyframes banner{
     0%{
-        background-image: url(./hero/frente\ ok.jpg ok.jpg);       
+        background-image: url(./hero/frente\ ok.jpg ok.jpg);
     }
     20%{
         background-image: url(./hero/frente\ ok.jpg);
@@ -190,25 +199,92 @@ section{
 
 }
 
-/* NOSOTROS */
+/* CONTACTANOS */
+.arco{
+    width: 100%;
+    height: 40px;
+    background-color: var(--gris);
+    border-start-start-radius: 130%;
+    border-start-end-radius: 130%;
+    position: absolute;
+    top: 100vh;
+    border-top: 3px solid var(--blanco);
+}
+.contactanos{
+    display: flex;
+    width: 100%;
+    background: var(--gris);
+    height: 100px;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 23px;
+    
+}
+.contactanos p{
+    font-size: 28px;
+    padding-top: 11px;
+    color: var(--blanco);
+    
+}
+.contactanos a{
+    padding: 9px 20px;
+    border: 1px solid var(--blanco);
+    background: var(--rojo);
+    color: var(--blanco);
+    border-radius: 1rem;
+    font-size: 28px;
+    
 
+}
+.contactanos a:hover{
+    background: var(--blanco);
+    color: var(--rojo);
+}
+
+
+
+
+/* NOSOTROS */
+.background{
+    background-image: url(./bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 70%;
+    position: absolute;
+    width: 100vw;
+    /* top: 100vh; */
+    margin-top: 40px;
+
+}
 
 
 #nosotros{
     display: flex;
     flex-direction: column;
     max-width: 1200px;
-    gap: 30px;
+
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: var(--gris);
-    
+    gap: 120px;
+    border-radius: 1rem;
+
 }
 .empresa{
     max-width: 98%;;
     text-align: justify;
-    
+    background-color: var(--bg-footer);
+    border-radius: 1rem;
+    /* border: 3px solid var(--bg-gris); */
+    z-index: 2;
+    margin-top: 35px;
+    border-bottom: 3px solid var(--negro);
+    border-left: 3px solid var(--negro);
+    /* margin-top: -100px; */
+
 }
 .empresa h2,
 .clientes h2,
@@ -217,19 +293,30 @@ section{
 #contacto h2{
     text-align: center;
     padding: 10px 0;
-    font-size: 30px;
-    color: var(--rojo);
+    font-size: 40px;
+    color: var(--bg-gris);
+}
+.clientes h2,
+.empresa h2{
+    color: var(--gris);
 }
 .empresa p{
-    /* padding: 30px 0; */
+    padding: 30px;
     font-size: 24px;
-    color: var(--blanco);   
+    color: var(--negro);
+    font-weight: 500;
 }
 
 .clientes{
     max-width: 98%;
     align-items: center;
-    
+    /* margin-top: 120px; */
+    border-top: 3px solid var(--negro);
+    border-right: 3px solid var(--negro);
+    z-index: 2;
+    background-color: var(--bg-footer);
+    border-radius: 1rem;
+
     /* padding-top: 40px;     */
 }
 
@@ -253,36 +340,52 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    width: 100%;   
-    
+    height: 900px;
+    width: 100%;
+    /* margin-top: 150px; */
+    background: var(--gris);
+    gap: 13px;
+
 }
+
+#servicios h2{
+    color: var(--bg-gris);
+    /* padding-top: 100px; */
+}
+
+
+
+
 .products-container{
     display: flex;
     gap: 7.5px;
     flex-wrap: wrap;
-    padding: 30px 0;
+    /* padding: 30px 0; */
     justify-content: center;
+    max-width: 1200px;
+    background: var(--bg-gris);
+    padding: 100px 0;
+    border-radius: 50%;
     /* max-width: 98%; */
-      
+
 }
 .product{
     display: flex;
     flex-direction: column;
-    
+
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     width: 395px;
     height: 395px;
     border-radius: 1rem;
-    padding: 70px 0; 
+    padding: 70px 0;
     position: relative;
     z-index: 1;
-    
+
 }
 .product:hover{
-    box-shadow: 12px 12px 18px -4px rgba(27, 27, 27, 0.8);
+    box-shadow: 12px 12px 18px -4px var(--rojo);
 }
 
 .product::after,
@@ -298,14 +401,14 @@ section{
     z-index: -1;
     border-radius: 1rem;
 }
-.product h2,
-.ingenieria h2,
-.calidad h2{
-    color: wheat;
+.product h3,
+.ingenieria h3,
+.calidad h3{
+    color: var(--blanco);
     font-size: 33px;
     font-weight: 900;
     letter-spacing: 3px;
-    
+
 }
 .product ul,
 .ingenieria ul,
@@ -314,7 +417,7 @@ section{
     text-align: center;
     align-items: center;
     /* margin-bottom: 20px; */
-    
+
 
 }
 .product ul li,
@@ -329,31 +432,31 @@ section{
 }
 .product button{
     background: none;
-    border: 2px solid wheat;
+    border: 2px solid var(--blanco);
     padding: 10px 35px;
-    color: wheat;
+    color: var(--blanco);
     font-weight: 700;
     font-size: 15px;
     border-radius: 1rem;
     cursor: pointer;
     transition: all 300ms ease-in;
-    
+
 }
 .product button:hover,
 .banner-content a:hover{
-    background: wheat;
-    color: black;
+    background: var(--rojo);
+    /* color: var(--gris); */
     transform: scale(1.1,1.1);
     transition: all 300ms ease-out;
     animation-direction: alternate;
-    
+
 }
 
 .mecanizados{
     background-image: url(./Mecanizados/PIÑON\ Z23\ MN25\ mec\ bg.jpg);
     background-size: cover;
     background-position: center;
-        
+
 }
 .transmisiones{
     background-image: url(./Transmisiones/Tren\ de\ engranajes\ 6\ transm\ bg.jpg);
@@ -371,12 +474,15 @@ section{
     display: flex;
     flex-direction: column;
     /* padding: 30px 0; */
-    
+    width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 30px;
-    max-width: 1200px;
+    height: 800px;
+    
+    background: var(--gris);
+
 
 }
 .ing-control{
@@ -384,13 +490,26 @@ section{
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    background-color: var(--bg-negro);
+    height: 600px;
+    border-radius: 50%;
+    z-index: 2;
+}
+#ingenieria-control h2{
+    color: var(--blanco);
+    z-index: 2;
+}
+#ingenieria-control .background{
+    height: 100%;
 }
 .ingenieria,
 .calidad{
     display: flex;
     flex-direction: column;
     width: 590px;
-    height: 450px;    
+    height: 450px;
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 22, 40, .6);
@@ -401,6 +520,7 @@ section{
     align-items: center;
     gap: 20px;
     padding: 30px 35px;
+    border: 1px solid var(--blanco);
 }
 .ingenieria:hover,
 .calidad:hover{
@@ -412,13 +532,14 @@ section{
     background-image: url(./ingenieria.jpg);
 }
 .calidad{
-    background-image: url(./calidad.jpg); 
+    background-image: url(./calidad.jpg);
+    
 }
 .calidad ul{
     display: flex;
     flex-direction: column;
-    gap: 37px;
-    align-items: flex-start; 
+    gap: 23px;
+    align-items: flex-start;
 }
 .ingenieria ul{
     display: flex;
@@ -433,30 +554,45 @@ section{
 #contacto{
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
-    gap: 30px;
+    
+
     align-items: stretch;
     width: 100%;
     justify-content: center;
+    align-items: center;
+    background: var(--gris);
+    /* border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem; */
+    padding: 20px 0;
+    /* margin-bottom: 40px; */
+    /* border: 5px solid var(--bg-gris); */
+    margin-top: 70px;
 }
 
 #contacto h2{
-    align-self: center;
-    font-size: 35px;
+    
+    font-size: 40px;
     font-weight: 600;
+    color: var(--blanco);
 
 }
 #contacto p{
-    text-align: center;
-    padding: 0 15px;
+    font-size: 25px;
+    padding: 15px;
+    color: var(--bg-footer);
 }
 
 .datos-container{
     display: flex;
     justify-content: center;
     width: 90%;
-    
-    
+    max-width: 1200px;
+    background: var(--bg-negro);
+    padding: 60px 0;
+    border-radius: 1rem;
+    border: 2px solid var(--bg-gris);
+
+
 }
 
 .datos{
@@ -465,24 +601,37 @@ section{
     justify-content: space-around;
     align-items: flex-start;
     width: 50%;
-    padding-left: 130px;
-    
+    /* padding-left: 130px; */
+
+}
+.datos h2{
+    color: var(--negro);
 }
 .datos h3{
     text-decoration: underline;
+    color: var(--blanco);
+    font-size: 20px;
+
 }
 .datos h4{
     text-decoration: underline;
+    color: var(--blanco);
 }
 .datos ul{
     border-right: solid 1px black;
     border-bottom: solid 1px black;
     padding-right: 42px;
     padding-bottom: 4px;
-    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.68);
+    box-shadow: 5px 5px 6px 0px var(--bg-footer);
+    background: var(--bg-footer);
+    border-top-left-radius: 1rem;
 }
 .datos ul li{
-    padding-left: 6px;
+    padding-left: 8px;
+    padding-top: 3px;
+    /* font-size: 15px;
+    font-weight: 500; */
+
 }
 .direccion,
 .mail,
@@ -490,27 +639,40 @@ section{
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+
+
 }
 
 iframe{
-    width: 400px;
+    width: 500px;
     box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.68);
-    
-    
+
+
 }
 .mapa{
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
+    max-width: 500px;
     border-right: solid 1px black;
     border-bottom: solid 1px black;
     box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.68);
+
 }
 
+/* .banner-content-2{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0, 22, 40, .6);
+       
+
+} */
+
 footer{
-    background: black;
-    color: white;
+    background: var(--negro);
+    color: var(--blanco);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -518,6 +680,9 @@ footer{
     gap: 60px;
     
     
+    /* border-top: 1px solid var(--gris); */
+
+
 }
 
 
@@ -551,22 +716,22 @@ footer{
         display: none;
         left: 140px;
         top: 0px;
-        padding: 0 15px;        
+        padding: 0 15px;
     }
     .navbar-list li a{
-        background: unset;        
+        background: unset;
     }
 
     /* MENU HAMBURGUESA */
     .menu-label{
         display: flex;
         cursor: pointer;
-        order: 2;        
+        order: 2;
     }
     #menu-toggle:checked ~ .navbar-list{
         display: flex;
     }
-    
+
     /* MAIN */
     main{
         padding-top: unset;
@@ -574,7 +739,7 @@ footer{
 
     /* HERO */
     #hero{
-        height: calc(100vh - 100px);    
+        height: calc(100vh - 100px);
     }
     #hero,
     .banner-content{
@@ -583,7 +748,7 @@ footer{
 
     /* SERVICIOS */
     .product{
-        max-width: 90%;        
+        max-width: 90%;
     }
 
     /* ING-CONTROL */
@@ -600,7 +765,7 @@ footer{
         justify-content: center;
         gap: 60px;
         width: 100%;
-    }   
+    }
     .datos{
         gap: 20px;
         align-items: center;
@@ -638,7 +803,7 @@ footer{
         height: auto;
     }
     .product h2{
-        letter-spacing: unset;   
+        letter-spacing: unset;
     }
 
     /* INGENIERIA-CONTROL */
@@ -653,7 +818,7 @@ footer{
     .calidad ul{
         gap: 12px;
     }
-    
+
     /* CONTACTO */
     .mapa{
         display: none;
@@ -664,7 +829,7 @@ footer{
         flex-direction: column;
         gap: unset;
         padding: 0 5px 10px 5px;
-        
+
     }
     footer img{
         width: 100px;
@@ -675,6 +840,6 @@ footer{
         text-align: center;
         /* padding: 0 5px 10px 5px; */
     }
-    
+
 }
 
