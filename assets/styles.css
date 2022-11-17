@@ -65,9 +65,7 @@ header{
 }
 .navbar-list{
     display: flex;
-
 }
-
 .navbar-list li a{
     background: none;
     color: var(--gris);
@@ -76,6 +74,7 @@ header{
 }
 .navbar-list li a:hover{
     background: var(--blanco);
+    color: var(--rojo);
 }
 .navbar-list li{
     float: left;
@@ -107,10 +106,7 @@ header{
 }
 
 
-/* section{
-    margin-top: 50px;
-    margin-bottom: 50px;
-} */
+
 /* HERO */
 
 #hero{
@@ -262,6 +258,7 @@ header{
 .contactanos a:hover{
     background: var(--blanco);
     color: var(--rojo);
+    border: 1px solid var(--rojo);
 }
 
 
@@ -273,11 +270,12 @@ header{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 920px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 120px;
-    border-radius: 1rem;
+    height: 930px;
+    position: relative;
+    /* gap: 120px; */
+    /* border-radius: 1rem; */
 
 }
 
@@ -286,25 +284,20 @@ header{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100%;
+    height: 930px;
     position: absolute;
-    
+    top: 0;
     width: 100%;
 }
-
 
 .empresa{
     max-width: 1200px;
     text-align: justify;
     background-color: var(--bg-footer);
     border-radius: 1rem;
-    /* border: 3px solid var(--bg-gris); */
     z-index: 2;
-    /* margin-top: 35px; */
     border-bottom: 3px solid var(--negro);
     border-left: 3px solid var(--negro);
-    /* margin-top: -100px; */
-
 }
 .empresa h2,
 .clientes h2,
@@ -326,20 +319,15 @@ header{
     color: var(--negro);
     font-weight: 500;
 }
-
 .clientes{
     max-width: 1200px;
     align-items: center;
-    /* margin-top: 120px; */
     border-top: 3px solid var(--negro);
     border-right: 3px solid var(--negro);
     z-index: 2;
     background-color: var(--bg-footer);
     border-radius: 1rem;
-
-    /* padding-top: 40px;     */
 }
-
 .img{
     display: flex;
     padding: 15px;
@@ -351,7 +339,6 @@ header{
     width: 100px;
     height: 70px;
     object-fit: contain;
-
 }
 
 /* SERVICIOS */
@@ -360,35 +347,26 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 900px;
+    /* height: 900px; */
     width: 100%;
-    /* margin-top: 150px; */
     background: var(--gris);
-    gap: 13px;
-    /* position: relative; */
-
+    /* gap: 13px; */
+    min-height: 900px;
+    padding: 30px 10px 50px 10px;
 }
-
 #servicios h2{
     color: var(--bg-gris);
-    /* padding-top: 100px; */
 }
-
-
-
-
 .products-container{
     display: flex;
     gap: 7.5px;
     flex-wrap: wrap;
-    /* padding: 30px 0; */
     justify-content: center;
+    
     max-width: 1200px;
     background: var(--bg-gris);
     padding: 100px 0;
     border-radius: 50%;
-    /* max-width: 98%; */
-
 }
 .product{
     display: flex;
@@ -403,12 +381,16 @@ header{
     padding: 70px 0;
     position: relative;
     z-index: 1;
-
 }
-.product:hover{
+.mecanizados:hover{
+    box-shadow: -12px 12px 18px -4px var(--rojo);
+}
+.transmisiones:hover{
+    box-shadow: 12px -12px 18px -4px var(--rojo);
+}
+.transportadores:hover{
     box-shadow: 12px 12px 18px -4px var(--rojo);
 }
-
 .product::after,
 .ingenieria::after,
 .calidad::after{
@@ -429,7 +411,6 @@ header{
     font-size: 33px;
     font-weight: 900;
     letter-spacing: 3px;
-
 }
 .product ul,
 .ingenieria ul,
@@ -437,9 +418,6 @@ header{
     justify-content: center;
     text-align: center;
     align-items: center;
-    /* margin-bottom: 20px; */
-
-
 }
 .product ul li,
 .ingenieria ul li,
@@ -449,7 +427,6 @@ header{
     color: #f5f5f5;
     text-align: center;
     line-height: 28px;
-
 }
 .product button{
     background: none;
@@ -466,7 +443,6 @@ header{
 .product button:hover,
 .banner-content a:hover{
     background: var(--rojo);
-    /* color: var(--gris); */
     transform: scale(1.1,1.1);
     transition: all 300ms ease-out;
     animation-direction: alternate;
@@ -494,16 +470,13 @@ header{
 #ingenieria-control{
     display: flex;
     flex-direction: column;
-    /* padding: 30px 0; */
     width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 30px;
-    height: 800px;
-    
-    background: var(--gris);
-
+    background-color: var(--bg-gris);
+    position: relative;
+    padding-top: 30px;
 
 }
 .ing-control{
@@ -513,13 +486,23 @@ header{
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    background-color: var(--bg-negro);
-    /* height: 600px; */
-    border-radius: 50%;
-    z-index: 2;
+    min-height: 997px;
+     
 }
+.background-2{
+    background-image: url(./bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 997px;
+    position: absolute;    
+    width: 100%;
+    display: flex;
+    
+}
+
 #ingenieria-control h2{
-    color: var(--blanco);
+    color: var(--gris);
     z-index: 2;
 }
 /* #ingenieria-control .background{
@@ -535,7 +518,7 @@ header{
     background-position: center;
     background-color: rgba(0, 22, 40, .6);
     position: relative;
-    z-index: 1;
+    z-index: 2;
     border-radius: 1rem;
     justify-content: flex-start;
     align-items: center;
@@ -575,19 +558,19 @@ header{
 #contacto{
     display: flex;
     flex-direction: column;
-    
-
+    /* height: 900px; */
+    max-width: 1400px;
     align-items: stretch;
     width: 100%;
     justify-content: center;
     align-items: center;
-    background: var(--gris);
+    background: blue;
     /* border-top-right-radius: 1rem;
     border-bottom-left-radius: 1rem; */
-    padding: 20px 0;
+    
     /* margin-bottom: 40px; */
     /* border: 5px solid var(--bg-gris); */
-    margin-top: 70px;
+    
 }
 
 #contacto h2{
@@ -606,9 +589,9 @@ header{
 .datos-container{
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
-    background: var(--bg-negro);
+    background: var(--negro);
     padding: 60px 0;
     border-radius: 1rem;
     border: 2px solid var(--bg-gris);
@@ -623,6 +606,7 @@ header{
     align-items: flex-start;
     width: 50%;
     /* padding-left: 130px; */
+    background: var(--rojo);
 
 }
 .datos h2{
@@ -666,7 +650,7 @@ header{
 }
 
 iframe{
-    width: 500px;
+    max-width: 500px;
     box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.68);
 
 
@@ -675,22 +659,13 @@ iframe{
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 500px;
+    width: 50%;
     border-right: solid 1px black;
     border-bottom: solid 1px black;
     box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.68);
+    background: violet;
 
 }
-
-/* .banner-content-2{
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    background-color: rgba(0, 22, 40, .6);
-       
-
-} */
-
 footer{
     background: var(--negro);
     color: var(--blanco);
@@ -707,7 +682,10 @@ footer{
 }
 
 
-
+section{
+    width: 100%;
+    max-width: 1400px;
+}
 
 
 
@@ -767,16 +745,39 @@ footer{
         border-radius: unset;
     }
 
+    /* CONTACTANOS */
+    .contactanos{
+        padding: 6px 9px;
+    }
+    .contactanos p,
+    .contactanos a{
+        font-size: 25px;
+    }
+
+    /* NOSOTROS */
+    #nosotros{
+        padding: 0 20px;
+    }
+
     /* SERVICIOS */
+    
     .product{
         max-width: 90%;
     }
 
+    .transmisiones:hover{
+        box-shadow: 12px 12px 18px -4px var(--rojo);
+    }
+
     /* ING-CONTROL */
+    .background-2{
+        padding: 10px 0;
+    }
     .ingenieria,
     .calidad{
         max-width: 90%;
         height: unset;
+        padding: 20px 25px;
     }
 
     /* CONTACTO */
@@ -825,6 +826,9 @@ footer{
     }
     .product h2{
         letter-spacing: unset;
+    }
+    .mecanizados:hover{
+        box-shadow: 12px 12px 18px -4px var(--rojo);
     }
 
     /* INGENIERIA-CONTROL */
