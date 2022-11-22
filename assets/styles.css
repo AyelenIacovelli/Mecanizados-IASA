@@ -31,7 +31,6 @@ main{
     align-items: center;
     justify-content: center;
     margin-top: 100px;
-    /* padding-top: 30px; */
     background: var(--blanco);
 }
 
@@ -64,6 +63,7 @@ header{
     align-items: center;
     justify-content: center;
     gap: 40px;
+    max-width: 1400px;
 }
 .navbar-list{
     display: flex;
@@ -131,7 +131,6 @@ header{
     background-color: #f5f5f5;
     width: 100%;
     animation: banner 30s infinite ease-out;
-    max-width: 1400px;    
 }
 
 .banner-content{
@@ -184,6 +183,7 @@ header{
 #hero .banner-content a:hover{
     background-image: url(./prueba\ bg\ boton.webp);
     background-size: cover;
+    background-position: center;
     color: var(--blanco);
     transform: scale(1.1,1.1);
     transition: all 400ms ease-in-out;
@@ -193,43 +193,43 @@ header{
 @keyframes banner{
     0%{
         background-image: url(./hero/frente\ ok.jpg ok.jpg);
-        transform: scale(1,1);
+        /* transform: scale(1,1); */
     }
     20%{
         background-image: url(./hero/frente\ ok.jpg);
-        transform: scale(1.1,1.1);
+        /* transform: scale(1.1,1.1); */
     }
     21%{
         background-image: url(./hero/mecanizados\ ok.jpg);
-        transform: scale(1,1);
+        /* transform: scale(1,1); */
     }
     40%{
         background-image: url(./hero/mecanizados\ ok.jpg);
-        transform: scale(1.1,1.1);
+        /* transform: scale(1.1,1.1); */
     }
     41%{
         background-image: url(./hero/Prueba\ de\ func\ 112358.jpg);
-        transform: scale(1,1);
+        /* transform: scale(1,1); */
     }
     60%{
         background-image: url(./hero/Prueba\ de\ func\ 112358.jpg);
-        transform: scale(1.1,1.1);
+        /* transform: scale(1.1,1.1); */
     }
     61%{
         background-image: url(./hero/ok1.jpg);
-        transform: scale(1,1);
+        /* transform: scale(1,1); */
     }
     80%{
         background-image: url(./hero/ok1.jpg);
-        transform: scale(1.1,1.1);
+        /* transform: scale(1.1,1.1); */
     }
     81%{
         background-image: url(./hero/20160407_103108.jpg);
-        transform: scale(1,1);
+        /* transform: scale(1,1); */
     }
     100%{
         background-image: url(./hero/20160407_103108.jpg);
-        transform: scale(1.1,1.1);
+        /* transform: scale(1.1,1.1); */
     }
 
 }
@@ -269,6 +269,7 @@ header{
     border: 2px solid var(--bg-footer);
     background-image: url(./prueba\ bg\ boton.webp);
     background-size: cover;
+    background-position: center;
     color: var(--blanco);
     border-radius: 1rem;
     font-size: 28px;
@@ -286,7 +287,7 @@ header{
 
 #nosotros h2,
 #ingenieria-control h2{
-    text-shadow: 2px 2px 2px var(--bg-negro);
+    text-shadow: 3px 3px 2px var(--bg-negro);
 }
 
 #contacto h2,
@@ -389,7 +390,7 @@ text-shadow: 2px 2px 2px var(--negro);
 }
 #servicios h2{
     color: var(--bg-gris);
-    padding-top: 60px;
+    padding: 40px 0;
 }
 .products-container{
     display: flex;
@@ -481,6 +482,7 @@ text-shadow: 2px 2px 2px var(--negro);
 .product button:hover{
     background-image: url(./prueba\ bg\ boton.webp);
     background-size: cover;
+    background-position: center;
     transition: all 400ms ease-in-out;
     
     /* animation-direction: alternate; */
@@ -513,10 +515,10 @@ text-shadow: 2px 2px 2px var(--negro);
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--bg-gris);
-    position: relative;
-    padding-top: 30px;
+    background: radial-gradient(circle, rgba(247,242,242,1) 0%, rgba(192,192,192,1) 26%, rgba(125,124,124,1) 100%);
+    background-size: cover;
 
+    position: relative;
 }
 .ing-control{
     display: flex;
@@ -543,6 +545,7 @@ text-shadow: 2px 2px 2px var(--negro);
 #ingenieria-control h2{
     color: var(--gris);
     z-index: 2;
+    padding: 40px 0;
 }
 /* #ingenieria-control .background{
     height: 100%;
@@ -658,7 +661,7 @@ text-shadow: 2px 2px 2px var(--negro);
     /* text-decoration: underline; */
     color: var(--blanco);
     font-size: 32px;
-    padding: 70px;
+    padding: 40px 0;
     text-align: center;
 }
 .datos ul h4{
@@ -761,7 +764,6 @@ footer{
 
 section{
     width: 100%;
-    /* max-width: 1400px; */
 }
 
 
