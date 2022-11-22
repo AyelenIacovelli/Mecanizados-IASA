@@ -1,14 +1,20 @@
-/* @import;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
-
-} */
+    --gris: rgb(125, 124, 124);
+    --blanco: rgb(247, 242, 242);
+    --rojo: rgb(199, 46, 46);
+    --negro: rgb(0, 0, 0);
+    --bg-footer: rgba(247, 242, 242, 0.8);
+    --bg-gris: rgb(192, 192, 192);
+    --bg-negro: rgba(0, 0, 0, 0.8);
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: ;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     list-style: none;
 }
@@ -16,6 +22,7 @@
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+
 }
 
 main{
@@ -23,50 +30,55 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* margin-top: 100px; */
     width: 100%;
-    background: white;
-    padding-top: 30px;
+    background: var(--blanco);
 }
 
 /* ENCABEZADO */
 header{
-    background-color: black;
+    background-color: var(--blanco);
     width: 100%;
     display: flex;
     justify-content: center;
-    
+
     align-items: center;
     height: 100px;
     padding: 0 30px;
-    position: fixed;
-    top: 0;
     z-index: 2;
+    border-bottom: 1px solid var(--gris);
 }
 .logo{
     height: 80px;
     object-fit: scale-down;
-
 }
+.navbar .logo:hover{
+    filter: drop-shadow(0px -1px 2px rgb(125, 124, 124));  
+}
+
 /* NAVBAR */
 .navbar{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
+    max-width: 1400px;
 }
-/* .navbar-list{
-   
-} */
-
+.navbar-list{
+    display: flex;
+}
 .navbar-list li a{
-    background: black;
-    color: white;
+    font-size: 16px;
+    background: none;
+    color: var(--gris);
     padding: 6px 8px;
     display: block;
 }
 .navbar-list li a:hover{
-    background: grey;
+    background: var(--blanco);
+    color: var(--rojo);
 }
+
 .navbar-list li{
     float: left;
     position: relative;
@@ -79,6 +91,7 @@ header{
     display: none;
     position: absolute;
     min-width: 130px;
+    background: var(--blanco);
 }
 .navbar-list li:hover > ul{
     display: block;
@@ -87,39 +100,86 @@ header{
 .menu-icon{
     color: grey;
     font-size: 25px;
-    
+
 }
 
 .menu-label,
 #menu-toggle{
     display: none;
 }
+
 /* USUARIO */
 
 .background{
     background-image: url(./frente\ ok.jpg);
     height: calc(100vh - 200px);
-    width: 100%;
-    max-width: 1200px;
+    width: 100%;    
     background-size: cover;
     background-position: center;
-    position: absolute;
-    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    /* top: 100px; */
 }
 
 form{
-    
-    background: none;
-    
+    border: 1px solid var(--bg-negro);
+    box-shadow: 0px 0px 13px 4px rgba(0,0,0,0.75);
+    background-color: rgba(0, 22, 40, .6);
+    border-radius: 1rem;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
     height: 60vh;
-    
+    gap: 10px;
+    padding: 15px 30px;
 }
+form h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--blanco);
+    padding-bottom: 30px;
+    text-shadow: 3px 3px 2px rgb(199,46,46); 
+}
+form input{
+    padding: 5px 12px;
+    width: 310px;
+    border: none;
+    outline: none;
+    background: var(--blanco);
+    border-radius: 1rem;
+}
+input:focus{
+    border: none;
+    outline: none;
+    background: var(--bg-gris);
+}
+form button{
+    padding: 8px 15px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    background: var(--gris);
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+    border-radius: 1rem;
+}
+form button:hover{
+    cursor: pointer;
+    background: var(--rojo);
+    border: 1px solid var(--blanco);
+    color: var(--blanco);
+}
+p a{
+    font-size: 15px;
+    font-size: 500;
+    color: var(--blanco);
+    text-decoration: underline;
+}
+
 footer{
     background: black;
     color: white;
@@ -128,9 +188,6 @@ footer{
     align-items: center;
     height: 100px;
     gap: 60px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 

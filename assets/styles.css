@@ -118,6 +118,17 @@ header{
     display: none;
 }
 
+.overlay{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 22, 40, .6);
+    backdrop-filter: blur(5px);
+    display: none;
+}
 
 
 /* HERO */
@@ -241,27 +252,36 @@ header{
     align-items: center;
     width: 100%;
     height: 150px;
-    background: var(--gris);
-    border-top: 2px solid var(--blanco);
-    border-bottom: 2px solid var(--blanco);
-    padding: 0 40px 0 30px;
+    background-image: url(./bg4contacto.jpg);
+    /* border-top: 3px solid var(--blanco);
+    border-bottom: 3px solid var(--blanco); */
+    border-width: 3px;
+    border-color: var(--blanco);
+    border-style: solid;
+    /* padding: 0 30px; */
     z-index: 2;
+    border-radius: 1rem;
+    margin-top: -12px;
+}
+#contactanos .banner-content{
+    border-radius: 1rem;
 }
 .contactanos{
     display: flex;
-    max-width: 1200px;
-    justify-content: center;
+    max-width: 1400px;
     align-items: center;    
     height: 150px;
     gap: 10px;
+    margin: 0 7px;
 }
 .contactanos p{
-    font-size: 28px;
+    font-size: 26px;
     color: var(--blanco);
-    text-align: center;
+    /* text-align: center; */
+    
     font-weight: 500;
-    padding-right: 20px;
-    padding-left: 10px;
+    /* padding-right: 20px;
+    padding-left: 10px; */
     text-shadow: 3px 3px 2px rgb(199,46,46);    
 }
 .contactanos a{
@@ -278,8 +298,8 @@ header{
     text-shadow: 2px 2px 2px var(--bg-negro);
 }
 .contactanos a:hover{
-    border: 2px solid var(--bg-negro);
-    text-shadow: -2px -2px 1px var(--bg-negro);   
+    /* border: 2px solid var(--bg-negro); */
+    text-shadow: -3px -3px 3px var(--bg-negro);   
 }
 
 
@@ -305,10 +325,12 @@ text-shadow: 2px 2px 2px var(--negro);
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
     align-items: center;
     height: 930px;
     position: relative;
+    margin-top: -12px;
 }
 
 .background{
@@ -352,7 +374,7 @@ text-shadow: 2px 2px 2px var(--negro);
     font-size: 24px;
     color: var(--negro);
     font-weight: 600;
-        text-shadow: 2px 2px 2px var(--gris);    
+    text-shadow: 2px 2px 2px var(--gris);    
 }
 .clientes{
     max-width: 1200px;
@@ -397,7 +419,7 @@ text-shadow: 2px 2px 2px var(--negro);
     gap: 7.5px;
     flex-wrap: wrap;
     justify-content: center;
-    
+    margin: 0 15px;
     max-width: 1200px;
     background: var(--bg-gris);
     padding: 100px 0;
@@ -407,7 +429,7 @@ text-shadow: 2px 2px 2px var(--negro);
 .product{
     display: flex;
     flex-direction: column;
-
+    border: 1px solid var(--bg-gris);
     justify-content: space-between;
     align-items: center;
     gap: 10px;
@@ -515,19 +537,23 @@ text-shadow: 2px 2px 2px var(--negro);
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: radial-gradient(circle, rgba(247,242,242,1) 0%, rgba(192,192,192,1) 26%, rgba(125,124,124,1) 100%);
+    /* background: radial-gradient(circle, rgba(247,242,242,1) 0%, rgba(192,192,192,1) 26%, rgba(125,124,124,1) 100%); */
     background-size: cover;
+    background-position: center;
+    
 
-    position: relative;
+    /* position: relative; */
 }
 .ing-control{
     display: flex;
+    flex-direction: column;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    min-height: 997px;
+    min-height: 1041px;
+    /* background: var(--bg-gris); */
      
 }
 .background-2{
@@ -535,7 +561,7 @@ text-shadow: 2px 2px 2px var(--negro);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    min-height: 997px;
+    min-height: 1041px;
     position: absolute;    
     width: 100%;
     display: flex;
@@ -543,9 +569,10 @@ text-shadow: 2px 2px 2px var(--negro);
 }
 
 #ingenieria-control h2{
-    color: var(--gris);
+    color: var(--bg-gris);
     z-index: 2;
     padding: 40px 0;
+    text-shadow: 0px 6px 5px rgba(199,46,46,0.6);
 }
 /* #ingenieria-control .background{
     height: 100%;
@@ -558,7 +585,8 @@ text-shadow: 2px 2px 2px var(--negro);
     height: 450px;
     background-size: cover;
     background-position: center;
-    background-color: rgba(0, 22, 40, .6);
+    /* background-color: rgba(0, 22, 40, .6); */
+    background: var(--bg-negro);
     position: relative;
     z-index: 2;
     border-radius: 1rem;
@@ -567,6 +595,7 @@ text-shadow: 2px 2px 2px var(--negro);
     gap: 20px;
     padding: 30px 35px;
     border: 1px solid var(--blanco);
+
 }
 .ingenieria:hover,
 .calidad:hover{
@@ -575,10 +604,10 @@ text-shadow: 2px 2px 2px var(--negro);
     animation-direction: alternate;
 }
 .ingenieria{
-    background-image: url(./ingenieria.jpg);
+    margin-top: 60px;
 }
 .calidad{
-    background-image: url(./calidad.jpg);
+    margin-bottom: 60px;
     
 }
 .calidad ul{
@@ -618,13 +647,14 @@ text-shadow: 2px 2px 2px var(--negro);
     font-weight: 600;
     color: var(--blanco);
     padding: 40px 0;
+    
 
 }
 #contacto p{
     font-size: 25px;    
     color: var(--bg-footer);
     text-align: center;
-    padding: 0 10px 30px 10px;
+    padding: 0 23px 30px 23px;
 }
 
 /* #contacto :nth-child(3){
@@ -635,7 +665,7 @@ text-shadow: 2px 2px 2px var(--negro);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 95%;
     max-width: 1200px;
     background-image: url(./contacto4.jpg);
     background-position: center;
@@ -663,6 +693,7 @@ text-shadow: 2px 2px 2px var(--negro);
     font-size: 32px;
     padding: 40px 0;
     text-align: center;
+    text-shadow: 2px 2px 2px var(--negro);
 }
 .datos ul h4{
     /* text-decoration: underline; */
@@ -754,11 +785,6 @@ footer{
     align-items: center;
     height: 100px;
     gap: 60px;
-    
-    
-    /* border-top: 1px solid var(--gris); */
-
-
 }
 
 
@@ -780,8 +806,8 @@ section{
         width: 90%;
         display: none;
         flex-direction: column;
-        background-color: pink;
-        border: 2px solid grey;
+        background-color: var(--negro);
+        border: 2px solid var(--bg-gris);
         border-top: 0px;
         border-radius: 0px 0px 15px 15px;
         padding: 45px 30px;
@@ -790,14 +816,25 @@ section{
         align-items: center;
         display: none;
     }
+
     .navbar-list li ul{
         display: none;
-        left: 140px;
+        left: 130px;
         top: 0px;
         padding: 0 15px;
+        
     }
+    
+    .navbar-list li a:hover{
+        background: var(--blanco);
+
+    }
+    .navbar-list li ul{
+        background: var(--blanco);
+    }
+    
     .navbar-list li a{
-        background: unset;
+        color: var(--blanco);
     }
 
     /* MENU HAMBURGUESA */
@@ -808,6 +845,9 @@ section{
     }
     #menu-toggle:checked ~ .navbar-list{
         display: flex;
+    }
+    #menu-toggle:checked ~ .overlay{
+        display: block;
     }
 
     /* MAIN */
@@ -874,14 +914,15 @@ section{
 
     /* ING-CONTROL */
     .background-2{
-        padding: 10px 0;
+        /* padding: 10px 0; */
     }
     .ingenieria,
     .calidad{
         max-width: 90%;
         height: unset;
-        padding: 20px 25px;
+        
     }
+    
 
     /* CONTACTO */
     .datos-container{
@@ -914,22 +955,65 @@ section{
 
 @media (max-width: 576px){
 
+    .navbar-list{
+        left: 0;
+        width: 100%;
+        border: none;
+        height: 100%;
+        
+    }
+
     /* HERO */
+    .navbar-list{
+        
+        
+    }
     #hero{
         display: none;
     }
     main{
-        margin-top: 50px;
+        margin-top: 100px;
+    }
+
+    #contactanos{
+        display: none;
+    }
+    #nosotros{
+        padding: 0 5px;
+    }
+    .empresa,
+    .clientes{
+        margin: unset;
+    }
+    .empresa p{
+        font-size: 17px;
+        overflow-x: scroll;
+        height: 300px;
+    }
+    #nosotros .clientes{
+        /* display: flex; */
+        overflow-x: scroll;
+        height: 300px
     }
 
     /* SERVICIOS */
     .product{
         max-width: 312px;
         height: auto;
+        padding: 30px 5px;
     }
     .product h2{
         letter-spacing: unset;
+        font-size: 10px;
     }
+    #servicios h3{
+        font-size: 25px;
+    }
+    
+    #servicios ul li{
+        font-size: 20px;
+    }
+
     .mecanizados:hover{
         box-shadow: 12px 12px 18px -4px var(--rojo);
     }
@@ -948,6 +1032,9 @@ section{
     }
 
     /* CONTACTO */
+    .datos-container{
+        
+    }
     .mapa{
         display: none;
     }
