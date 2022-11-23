@@ -70,14 +70,15 @@ header{
 }
 .navbar-list li a{
     font-size: 16px;
-    background: none;
+    /* background: none; */
     color: var(--gris);
     padding: 6px 8px;
     display: block;
 }
 .navbar-list li a:hover{
-    background: var(--blanco);
+    /* background: var(--blanco); */
     color: var(--rojo);
+    font-weight: 600;
 }
 .navbar-list li:nth-child(3) a{
     color: var(--rojo);
@@ -110,7 +111,10 @@ header{
 .menu-icon{
     color: grey;
     font-size: 25px;
-
+    transition: all 0.2s ease-in-out;
+}
+.menu-icon:hover{
+    color: var(--rojo);
 }
 
 .menu-label,
@@ -141,9 +145,9 @@ header{
     background-position: center;
     background-color: #f5f5f5;
     width: 100%;
-    animation: banner 30s infinite ease-out;
+    animation: banner, zoom 30s infinite ease-out;
+    
 }
-
 .banner-content{
     width: 100%;
     height: 100%;
@@ -152,7 +156,8 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
+    
 }
 
 .banner-content h1{
@@ -204,45 +209,34 @@ header{
 @keyframes banner{
     0%{
         background-image: url(./hero/frente\ ok.jpg ok.jpg);
-        /* transform: scale(1,1); */
     }
     20%{
         background-image: url(./hero/frente\ ok.jpg);
-        /* transform: scale(1.1,1.1); */
     }
     21%{
-        background-image: url(./hero/mecanizados\ ok.jpg);
-        /* transform: scale(1,1); */
+        background-image: url(./hero/mecanizados\ ok.jpg);        
     }
     40%{
-        background-image: url(./hero/mecanizados\ ok.jpg);
-        /* transform: scale(1.1,1.1); */
+        background-image: url(./hero/mecanizados\ ok.jpg);       
     }
     41%{
         background-image: url(./hero/Prueba\ de\ func\ 112358.jpg);
-        /* transform: scale(1,1); */
     }
     60%{
         background-image: url(./hero/Prueba\ de\ func\ 112358.jpg);
-        /* transform: scale(1.1,1.1); */
     }
     61%{
         background-image: url(./hero/ok1.jpg);
-        /* transform: scale(1,1); */
     }
     80%{
         background-image: url(./hero/ok1.jpg);
-        /* transform: scale(1.1,1.1); */
     }
     81%{
         background-image: url(./hero/20160407_103108.jpg);
-        /* transform: scale(1,1); */
     }
     100%{
         background-image: url(./hero/20160407_103108.jpg);
-        /* transform: scale(1.1,1.1); */
     }
-
 }
 
 /* CONTACTANOS */
@@ -328,7 +322,7 @@ text-shadow: 2px 2px 2px var(--negro);
     /* justify-content: space-around; */
     justify-content: space-evenly;
     align-items: center;
-    height: 930px;
+    height: 700px;
     position: relative;
     margin-top: -12px;
 }
@@ -338,7 +332,7 @@ text-shadow: 2px 2px 2px var(--negro);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 930px;
+    height: 700px;
     position: absolute;
     top: 0;
     width: 100%;
@@ -353,6 +347,12 @@ text-shadow: 2px 2px 2px var(--negro);
     border-bottom: 3px solid var(--negro);
     border-left: 3px solid var(--negro);
     margin: 0 15px 0 15px;
+    overflow: auto;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 .empresa h2,
 .clientes h2,
@@ -367,14 +367,17 @@ text-shadow: 2px 2px 2px var(--negro);
 }
 .clientes h2,
 .empresa h2{
-    color: var(--gris);
+    color: var(--gris);  
 }
 .empresa p{
-    padding: 30px;
+    padding: 30px 50px;
     font-size: 24px;
     color: var(--negro);
     font-weight: 600;
-    text-shadow: 2px 2px 2px var(--gris);    
+    text-shadow: 3px 3px 2px var(--gris);
+    
+      
+
 }
 .clientes{
     max-width: 1200px;
@@ -385,10 +388,15 @@ text-shadow: 2px 2px 2px var(--negro);
     background-color: var(--bg-footer);
     border-radius: 1rem;
     margin: 0 15px 0 15px;
+    overflow-y: scroll;
+    height: 200px;
 }
+/* .clientes::-webkit-scrollbar{
+    
+} */
 .img{
     display: flex;
-    padding: 15px;
+    padding: 30px 50px;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
@@ -806,7 +814,7 @@ section{
         width: 90%;
         display: none;
         flex-direction: column;
-        background-color: var(--negro);
+        background-color: var(--bg-negro);
         border: 2px solid var(--bg-gris);
         border-top: 0px;
         border-radius: 0px 0px 15px 15px;
@@ -825,12 +833,15 @@ section{
         
     }
     
+    
     .navbar-list li a:hover{
-        background: var(--blanco);
+        /* background: var(--blanco); */
 
     }
     .navbar-list li ul{
-        background: var(--blanco);
+        border-left: 1px solid var(--rojo);
+        margin-top: -23px;
+        background: unset;
     }
     
     .navbar-list li a{
@@ -899,6 +910,17 @@ section{
     #nosotros{
         padding: 0 20px;
     }
+    .empresa h2{
+        padding: 5px 0;
+    }
+    .clientes h2{
+        padding: 5px 0 15px 0;
+    }
+    .empresa p,
+    .clientes .img{
+        font-size: 20px;
+        padding: 15px 30px;
+    }
 
     /* SERVICIOS */
     .products-container{
@@ -959,10 +981,16 @@ section{
         left: 0;
         width: 100%;
         border: none;
-        height: 100%;
-        
+        height: 100vh;        
     }
-
+    .navbar-list li ul{
+        left: 0;
+        top: 62px;
+        padding: unset;
+    }
+    .navbar-list li:hover > ul{
+        display: none;
+    }
     /* HERO */
     .navbar-list{
         
@@ -971,6 +999,7 @@ section{
     #hero{
         display: none;
     }
+    
     main{
         margin-top: 100px;
     }
@@ -980,25 +1009,43 @@ section{
     }
     #nosotros{
         padding: 0 5px;
+        height: 812px;
+        margin-top: unset;
+    }
+    #nosotros .background{
+        height: 812px;
+    }
+    .empresa{
+        justify-content: flex-start;
     }
     .empresa,
     .clientes{
         margin: unset;
+        width: 96%;
     }
     .empresa p{
-        font-size: 17px;
-        overflow-x: scroll;
-        height: 300px;
+        font-size: 20px;
+        /* overflow-x: scroll; */
+        /* height: 300px; */
+    }
+    .clientes h2{
+        padding: 10px 0;
     }
     #nosotros .clientes{
         /* display: flex; */
-        overflow-x: scroll;
-        height: 300px
+        /* overflow-x: scroll; */
+        /* height: 300px */
     }
 
     /* SERVICIOS */
+    .products-container{
+        margin-bottom: 45px;
+        background: none;
+        gap: 22px;
+        padding: unset;
+    }
     .product{
-        max-width: 312px;
+        max-width: 300px;
         height: auto;
         padding: 30px 5px;
     }
@@ -1019,6 +1066,9 @@ section{
     }
 
     /* INGENIERIA-CONTROL */
+    .background-2{
+        min-height: 1147px;
+    }
     .ingenieria,
     .calidad{
         width: 90%;
@@ -1035,6 +1085,21 @@ section{
     .datos-container{
         
     }
+    .datos-container h3{
+        font-size: 20px;
+    }
+    .datos{
+        margin-bottom: 30px;
+    }
+    .datos ul{
+        padding: unset;
+        /* padding-left: unset; */
+        width: 280px;
+    }
+    .datos ul li{
+        font-size: 16px;
+    }
+
     .mapa{
         display: none;
     }

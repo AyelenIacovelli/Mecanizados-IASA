@@ -30,7 +30,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top: 100px; */
+    margin-top: 100px;
     background: var(--blanco);
 }
 
@@ -72,8 +72,9 @@ header{
     font-size: 16px;
     background: none;
     color: var(--gris);
-    padding: 6px 8px;
+    /* padding: 6px 8px; */
     display: block;
+    font-weight: 600;
 }
 .navbar-list li a:hover{
     background: var(--blanco);
@@ -83,12 +84,30 @@ header{
 .navbar-list li{
     float: left;
     position: relative;
-    width: 130px;
+    /* width: 130px; */
     text-align: center;
     line-height: 25px;
 }
 
-.navbar-list li ul{
+.navbar-list li a::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: var(--rojo);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s ease;
+}
+
+.navbar-list li a:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+/* .navbar-list li ul{
     display: none;
     position: absolute;
     min-width: 130px;
@@ -96,9 +115,9 @@ header{
 }
 .navbar-list li:hover > ul{
     display: block;
-}
+} */
 /* MENU HAMBURGUESA */
-.menu-icon{
+/* .menu-icon{
     color: grey;
     font-size: 25px;
 
@@ -107,15 +126,16 @@ header{
 .menu-label,
 #menu-toggle{
     display: none;
-}
+} */
 
 
 #transmisiones{
-    max-width: 1400px;
-    margin-top: 100px;
+    /* max-width: 1400px; */
+    /* margin-top: 100px; */
+    max-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -136,16 +156,20 @@ header{
 
     
 }
+
+.pagina{
+    max-width: 1400px;
+    width: 100%;
+}
+
 #transmisiones h1{
     font-size: 40px;    
     font-weight: 900;
     text-decoration: underline;
     color: var(--blanco);
     padding-bottom: 10px;
-    
-    
     letter-spacing: 10px;
-    /* text-align: center; */
+    text-shadow: 3px 3px 2px rgb(199,46,46);
 }
 
 #transmisiones h2{
@@ -153,22 +177,24 @@ header{
     font-weight: 700;
     text-align: center;
     padding: 60px 0 0 0;
-    color: var(--negro);      
+    color: var(--negro);
+    text-shadow: 3px 3px 2px rgb(199,46,46);      
 }
 #transmisiones p{
     font-size: 18px;
     text-align: center;
     padding: 10px 25px;
     color: var(--negro);
+    font-weight: 600;
 }
 
 /* GALERIA */
 
 .galeria{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 20px 50px;
     gap: 10px;
@@ -186,6 +212,8 @@ header{
     visibility: hidden;
     opacity: 0;
     position: absolute;
+    top: 0;
+    left: -1000px;
 }
 .modal:target{
     position: fixed;
@@ -275,4 +303,60 @@ footer{
     align-items: center;
     height: 100px;
     gap: 60px;
+}
+
+
+
+/* MEDIAQUERIES */
+@media (max-width: 992px){
+    h1{
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width: 576px){
+    #transmisiones h1{
+        font-size: 28px;    
+        font-weight: 900;
+        letter-spacing: 5px;
+    }
+
+    .portada-transmisiones{
+        background-position: calc(left - 1px);
+        height: 50vh;
+        
+    }
+
+    #transmisiones h2{
+        font-size: 25px;
+        font-weight: 700;
+    
+    }
+    #transmisiones p{
+        font-size: 18px;
+        
+        /* padding: 35px 15px 25px 15px; */
+        
+    }
+
+
+
+
+    footer{
+        flex-direction: column;
+        gap: unset;
+        padding: 0 5px 10px 5px;
+
+    }
+    footer img{
+        width: 100px;
+        object-fit: scale-down;
+        padding-top: 3px;
+    }
+    footer p{
+        text-align: center;
+        /* padding: 0 5px 10px 5px; */
+    }
 }

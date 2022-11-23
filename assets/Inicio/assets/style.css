@@ -71,8 +71,9 @@ header{
     font-size: 16px;
     background: none;
     color: var(--gris);
-    padding: 6px 8px;
+    /* padding: 6px 8px; */
     display: block;
+    font-weight: 600;
 }
 .navbar-list li a:hover{
     background: var(--blanco);
@@ -82,12 +83,30 @@ header{
 .navbar-list li{
     float: left;
     position: relative;
-    width: 130px;
+    /* width: 130px; */
     text-align: center;
     line-height: 25px;
+    padding: 0;
 }
 
-.navbar-list li ul{
+.navbar-list li a::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: var(--rojo);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s ease;
+}
+
+.navbar-list li a:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+/* .navbar-list li ul{
     display: none;
     position: absolute;
     min-width: 130px;
@@ -95,9 +114,9 @@ header{
 }
 .navbar-list li:hover > ul{
     display: block;
-}
+} */
 /* MENU HAMBURGUESA */
-.menu-icon{
+/* .menu-icon{
     color: grey;
     font-size: 25px;
 
@@ -106,7 +125,7 @@ header{
 .menu-label,
 #menu-toggle{
     display: none;
-}
+} */
 
 /* USUARIO */
 
@@ -166,6 +185,7 @@ form button{
     color: var(--blanco);
     border: 1px solid var(--blanco);
     border-radius: 1rem;
+    transition: all 300ms ease-in-out;
 }
 form button:hover{
     cursor: pointer;
@@ -179,6 +199,9 @@ p a{
     color: var(--blanco);
     text-decoration: underline;
 }
+p a:hover{
+    color: var(--bg-gris);
+}
 
 footer{
     background: black;
@@ -191,3 +214,35 @@ footer{
 }
 
 
+
+/* MEDIAQUERIES */
+@media (max-width: 992px){
+    
+
+}
+
+@media (max-width: 576px){
+    form{
+        max-width: 96%;
+    }
+    form input{
+    max-width: 98%;
+}
+
+
+    footer{
+        flex-direction: column;
+        gap: unset;
+        padding: 0 5px 10px 5px;
+
+    }
+    footer img{
+        width: 100px;
+        object-fit: scale-down;
+        padding-top: 3px;
+    }
+    footer p{
+        text-align: center;
+        /* padding: 0 5px 10px 5px; */
+    }
+}

@@ -30,7 +30,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top: 100px; */
+    margin-top: 100px;
     background: var(--blanco);
 }
 
@@ -40,7 +40,6 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
-
     align-items: center;
     height: 100px;
     padding: 0 30px;
@@ -72,7 +71,7 @@ header{
     font-size: 16px;
     background: none;
     color: var(--gris);
-    padding: 6px 8px;
+    font-weight: 600;
     display: block;
 }
 .navbar-list li a:hover{
@@ -83,35 +82,31 @@ header{
 .navbar-list li{
     float: left;
     position: relative;
-    width: 130px;
     text-align: center;
     line-height: 25px;
+    padding: 0;
 }
 
-.navbar-list li ul{
-    display: none;
+.navbar-list li a::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: var(--rojo);
     position: absolute;
-    min-width: 130px;
-    background: var(--blanco);
-}
-.navbar-list li:hover > ul{
-    display: block;
-}
-/* MENU HAMBURGUESA */
-.menu-icon{
-    color: grey;
-    font-size: 25px;
-
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s ease;
 }
 
-.menu-label,
-#menu-toggle{
-    display: none;
+.navbar-list li a:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }
 
 #transportadores{    
-    max-width: 1400px;
-    margin-top: 100px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,9 +125,11 @@ header{
     border-bottom-right-radius: 1rem;
     border: 3px solid black;
     border-top: none;
-    box-shadow: 0px 22px 39px 7px rgba(0,0,0,0.75);
-
-    
+    box-shadow: 0px 22px 39px 7px rgba(0,0,0,0.75);    
+}
+.pagina{
+    max-width: 1400px;
+    width: 100%;
 }
 #transportadores h1{
     font-size: 40px;    
@@ -140,8 +137,7 @@ header{
     text-decoration: underline;
     color: var(--blanco);
     padding-bottom: 10px;
-    
-    
+    text-shadow: 3px 3px 2px rgb(199,46,46);    
     letter-spacing: 10px;
 }
 
@@ -151,21 +147,24 @@ header{
     text-align: center;
     padding: 60px 0 0 0;
     color: var(--negro);
+    text-shadow: 3px 3px 2px rgb(199,46,46);
 }
 #transportadores p{
     font-size: 18px;
     text-align: center;
     padding: 10px 25px;
     color: var(--negro);
+    font-weight: 600;
 }
 
 /* GALERIA */
 
 .galeria{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 90%;
+    /* width: 90%; */
+    width: 100%;
     margin: auto;
     padding: 20px 50px;
     gap: 10px;
@@ -183,6 +182,8 @@ header{
     visibility: hidden;
     opacity: 0;
     position: absolute;
+    top: 0;
+    left: -1000px;
 }
 .modal:target{
     position: fixed;
@@ -271,4 +272,59 @@ footer{
     align-items: center;
     height: 100px;
     gap: 60px;
+}
+
+
+
+/* MEDIAQUERIES */
+@media (max-width: 992px){
+    h1{
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width: 576px){
+    #transportadores h1{
+        font-size: 27px;    
+        font-weight: 900;
+        letter-spacing: 2px;
+    }
+
+    .portada-transportadores{
+        background-position: calc(left - 1px);
+        height: 50vh;
+        
+    }
+
+    #transportadores h2{
+        display: none;
+    
+    }
+    #transportadores p{
+        font-size: 18px;
+        
+        padding: 35px 15px 25px 15px;
+        
+    }
+
+
+
+
+    footer{
+        flex-direction: column;
+        gap: unset;
+        padding: 0 5px 10px 5px;
+
+    }
+    footer img{
+        width: 100px;
+        object-fit: scale-down;
+        padding-top: 3px;
+    }
+    footer p{
+        text-align: center;
+        /* padding: 0 5px 10px 5px; */
+    }
 }
