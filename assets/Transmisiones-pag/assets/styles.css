@@ -369,6 +369,15 @@ footer{
     .dato-list ul li{
         font-size: 18px;
     }
+    .galeria{
+        height: 440px;
+        overflow: auto;
+        align-content: flex-start;
+        padding: unset;
+        max-width: 75%;
+        align-self: center;
+        border-right: 1px solid white;
+    }
     .img img{
         max-width: 75vw;
         max-height: 90vh;
