@@ -8,6 +8,8 @@
     --bg-footer: rgba(247, 242, 242, 0.8);
     --bg-gris: rgb(192, 192, 192);
     --bg-negro: rgba(0, 0, 0, 0.8);
+    --negro-shadow: rgba(0,0,0,0.75);
+    --banner: rgba(0, 22, 40, .6);
 }
 
 *{
@@ -30,7 +32,6 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top: 100px; */
     width: 100%;
     background: var(--blanco);
 }
@@ -41,7 +42,6 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
-
     align-items: center;
     height: 100px;
     padding: 0 30px;
@@ -71,7 +71,6 @@ header{
     font-size: 16px;
     background: none;
     color: var(--gris);
-    /* padding: 6px 8px; */
     display: block;
     font-weight: 600;
 }
@@ -79,16 +78,13 @@ header{
     background: var(--blanco);
     color: var(--rojo);
 }
-
 .navbar-list li{
     float: left;
     position: relative;
-    /* width: 130px; */
     text-align: center;
     line-height: 25px;
     padding: 0;
 }
-
 .navbar-list li a::after{
     content: "";
     height: 2px;
@@ -101,12 +97,10 @@ header{
     transform-origin: bottom right;
     transition: transform 0.15s ease;
 }
-
 .navbar-list li a:hover::after{
     transform-origin: bottom left;
     transform: scaleX(1);
 }
-
 .background{
     background-image: url(./frente\ ok.jpg);
     height: calc(100vh - 200px);
@@ -117,11 +111,10 @@ header{
     justify-content: center;
     align-items: center;
 }
-
 form{
     border: 1px solid var(--bg-negro);
-    box-shadow: 0px 0px 13px 4px rgba(0,0,0,0.75);
-    background-color: rgba(0, 22, 40, .6);
+    box-shadow: 0px 0px 13px 4px var(--negro-shadow);
+    background-color: var(--banner);
     border-radius: 1rem;
     max-width: 1400px;
     display: flex;
@@ -137,7 +130,7 @@ form h1{
     font-weight: 700;
     color: var(--blanco);
     padding-bottom: 30px;
-    text-shadow: 3px 3px 2px rgb(199,46,46); 
+    text-shadow: 3px 3px 2px var(--rojo); 
 }
 form input{
     padding: 5px 12px;
@@ -180,8 +173,8 @@ p a:hover{
 }
 
 footer{
-    background: black;
-    color: white;
+    background: var(--negro);
+    color: var(--blanco);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,6 +185,13 @@ footer{
 
 
 /* MEDIAQUERIES */
+
+@media (max-width: 992px){
+
+    footer p{
+        text-align: center;
+    }
+}
 
 @media (max-width: 576px){
 

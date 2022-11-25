@@ -8,6 +8,8 @@
     --bg-footer: rgba(247, 242, 242, 0.8);
     --bg-gris: rgb(192, 192, 192);
     --bg-negro: rgba(0, 0, 0, 0.8);
+    --banner: rgba(0, 22, 40, .6);
+    --bg-2-negro: rgba(0,0,0,0.75);
 }
 
 *{
@@ -40,7 +42,6 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
-
     align-items: center;
     height: 100px;
     padding: 0 30px;
@@ -71,7 +72,6 @@ header{
     background: none;
     color: var(--gris);
     font-weight: 600;
-    /* padding: 6px 8px; */
     display: block;
 }
 .navbar-list li a:hover{
@@ -82,18 +82,10 @@ header{
 .navbar-list li{
     float: left;
     position: relative;
-    /* width: 130px; */
     text-align: center;
     line-height: 25px;
-
-
     padding: 0;
-
-
 }
-
-
-
 .navbar-list li a::after{
     content: "";
     height: 2px;
@@ -106,7 +98,6 @@ header{
     transform-origin: bottom right;
     transition: transform 0.15s ease;
 }
-
 .navbar-list li a:hover::after{
     transform-origin: bottom left;
     transform: scaleX(1);
@@ -123,8 +114,8 @@ header{
 }
 form{
     border: 1px solid var(--bg-negro);
-    box-shadow: 0px 0px 13px 4px rgba(0,0,0,0.75);
-    background-color: rgba(0, 22, 40, .6);
+    box-shadow: 0px 0px 13px 4px var(--bg-2-negro);
+    background-color: var(--banner);
     max-width: 1400px;
     display: flex;
     flex-direction: column;
@@ -140,7 +131,7 @@ form h1{
     font-weight: 700;
     color: var(--blanco);
     padding-bottom: 30px;
-    text-shadow: 3px 3px 2px rgb(199,46,46); 
+    text-shadow: 3px 3px 2px var(--rojo); 
 }
 form input{
     padding: 5px 12px;
@@ -166,11 +157,9 @@ input:focus{
     width: unset;
 }
 .a-acuerdo{
-    color: beige;
-    padding: 0 10px;
-    
+    color: var(--blanco);
+    padding: 0 10px;    
     text-align: justify;
-
 }
 form .button{
     padding: 8px 15px;
@@ -200,16 +189,14 @@ p a:hover{
 }
 /* PIE DE PAGINA */
 footer{
-    background: black;
-    color: white;
+    background: var(--negro);
+    color: var(--blanco);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     gap: 60px;
 }
-
-
 
 /* MEDIAQUERIES */
 @media (max-width: 992px){
