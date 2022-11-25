@@ -110,6 +110,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 /* PORTADA */
@@ -185,8 +186,10 @@ header{
 .dato-list{
     border-radius: 1rem;
     width: 35%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 20px 40px;
+    display: flex;
+    justify-content: stretch;
 }
 .dato-list ul{
     gap: 10px;
@@ -204,15 +207,21 @@ header{
 .dato-list ul li ul{
     padding-top: 10px;
 }
+.dato-list ul li ul li{
+    list-style: disc;
+    list-style-position: inside;
+}
 
 /* GALERIA */
 .galeria{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-content: space-around;
     flex-wrap: wrap;
     width: 65%;
-    margin: auto;
+    /* margin: auto; */
     gap: 5px;
+    padding: 20px 40px 20px 20px;
 }
 .galeria img{
     width: 200px;
@@ -236,7 +245,7 @@ header{
     top: 100px;
     left: 0;
     width: 100%;
-    height: 85vh;
+    height: 100%;
     visibility: visible;
     opacity: 1;
     display: flex;
@@ -257,7 +266,7 @@ header{
     align-items: center;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 89.5%;
 }
 .img a{
     color: white;
@@ -285,11 +294,13 @@ header{
     object-fit: contain;
     border: 4px solid white;
     border-radius: 1rem;
+    margin-bottom: 95px;
 }
 /* CRUZ DE CIERRE */
 .cerrar{
     position: absolute;
     align-self: flex-end;
+    padding-bottom: 106px;
 }
 .cerrar i{
     font-size: 30px;
@@ -326,6 +337,9 @@ footer{
         min-height: unset;
         justify-content: center;
         align-items: center;
+    }
+    .dato-list ul li{
+        text-align: center;
     }
     .dato-list p{
         font-size: 20px;

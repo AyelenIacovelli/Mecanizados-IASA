@@ -112,6 +112,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 /* PORTADA */
@@ -158,7 +159,6 @@ header{
     background-image: url(../../bg4contacto.jpg);
     background-size: cover;
     border: 3px solid var(--blanco);
-    /* margin-bottom: 150px; */
 }
 
 /* TITULO */
@@ -190,6 +190,8 @@ header{
     width: 35%;
     /* min-height: 100vh; */
     padding: 20px 40px;
+    display: flex;
+    justify-content: stretch;
 }
 .dato-list ul{
     gap: 10px;
@@ -208,11 +210,13 @@ header{
 /* GALERIA */
 .galeria{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-content: space-around;
     flex-wrap: wrap;
     width: 65%;
-    margin: auto;
+    /* margin: auto; */
     gap: 5px;
+    padding: 20px 40px 20px 20px;
 }
 .galeria img{
     width: 200px;
@@ -236,7 +240,7 @@ header{
     top: 100px;
     left: 0;
     width: 100%;
-    height: 85vh;
+    height: 100%;
     visibility: visible;
     opacity: 1;
     display: flex;
@@ -257,7 +261,7 @@ header{
     align-items: center;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 89.5%;
 }
 /* ITEMS DE MODAL */
 .img a{
@@ -284,11 +288,13 @@ header{
     max-height: 400px;
     border: 4px solid white;
     border-radius: 1rem;
+    margin-bottom: 95px;
 }
 /* CRUZ DE CIERRE */
 .cerrar{
     position: absolute;
     align-self: flex-end;
+    padding-bottom: 106px;
 }
 .cerrar i{
     font-size: 30px;
