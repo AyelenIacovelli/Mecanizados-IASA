@@ -136,7 +136,7 @@ header{
     padding-bottom: 10px;
     letter-spacing: 10px;
     text-shadow: 3px 3px 2px rgb(199,46,46);
-    animation: translateX 4s forwards;
+    animation: translateX 2s forwards;
 }
 @keyframes translateX{
     0%{
@@ -157,7 +157,6 @@ header{
     background-image: url(../../bg4contacto.jpg);
     background-size: cover;
     border: 3px solid var(--blanco);
-    /* margin-bottom: 150px; */
 }
 
 /* TITULO */
@@ -206,10 +205,6 @@ header{
 }
 .dato-list ul li ul{
     padding-top: 10px;
-}
-.dato-list ul li ul li{
-    list-style: disc;
-    list-style-position: inside;
 }
 
 /* GALERIA */
@@ -347,6 +342,7 @@ footer{
     }
     .galeria{
         width: 100%;
+        padding: 20px;
     }    
     .bannercontent{
         flex-direction: column;

@@ -139,7 +139,7 @@ header{
     background-position: center;
     background-color: #f5f5f5;
     width: 100%;
-    animation: banner 30s infinite ease-out;
+    animation: banner 30s infinite ease-in-out;
 }
 /* BANNER */
 .banner-content{
@@ -535,8 +535,7 @@ text-shadow: 2px 2px 2px var(--negro);
     align-items: center;
     max-width: 1200px;
     min-height: 1041px;
-    /* background: var(--bg-gris); */
-
+    width: 100%;
 }
 .background-2{
     background-image: url(./bg.jpg);
@@ -820,17 +819,23 @@ footer{
     /* NOSOTROS */
     #nosotros{
         padding: 0 20px;
+        border-start-start-radius: 150px;
+        border-start-end-radius: 150px;
     }
     .empresa h2{
-        padding: 5px 0;
+        padding-top: 12px;
     }
     .clientes h2{
-        padding: 5px 0 15px 0;
+        padding: 5px 5px 15px 0;
     }
     .empresa p,
     .clientes .img{
         font-size: 20px;
         padding: 15px 30px;
+    }
+    .empresa p{
+        padding: 10px 30px;
+        font-size: 16px;
     }
 
     /* SERVICIOS */
@@ -851,7 +856,7 @@ footer{
         height: unset;
     }
     .background-2{
-        min-height: 1118px;
+        min-height: 1180px;
     }
 
     /* CONTACTO */
@@ -981,7 +986,7 @@ footer{
     }
     .ingenieria,
     .calidad{
-        width: 90%;
+        width: 98%;
         padding: 15px 20px;
     }
     .ingenieria{
