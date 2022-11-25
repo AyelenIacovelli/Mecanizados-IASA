@@ -756,6 +756,8 @@ footer{
         z-index: 2;
         align-items: center;
         display: none;
+        justify-content: center;
+        height: calc(92vh - 100px);
     }
     .navbar-list li ul{
         display: none;
@@ -802,7 +804,6 @@ footer{
 
     /* CONTACTANOS */
     #contactanos{
-        padding: 0 10px;
         gap: 3px;
     }
     .contactanos{
@@ -900,7 +901,9 @@ footer{
         left: 0;
         width: 100%;
         border: none;
-        height: 100vh;
+        height: calc(100vh - 100px);
+        border-radius: unset;
+        
     }
     .navbar-list li ul{
         left: 0;
