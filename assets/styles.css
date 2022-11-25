@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-:root{
+:root {
     --gris: rgb(125, 124, 124);
     --blanco: rgb(247, 242, 242);
     --rojo: rgb(199, 46, 46);
@@ -9,10 +9,11 @@
     --bg-gris: rgb(192, 192, 192);
     --bg-negro: rgba(0, 0, 0, 0.8);
     --banner: rgba(0, 22, 40, .6);
-    --rojo-rgba: rgba(199,46,46,0.6);
-    --gris-rgba: rgba(192,192,192,0.75);
+    --rojo-rgba: rgba(199, 46, 46, 0.6);
+    --gris-rgba: rgba(192, 192, 192, 0.75);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,11 +21,13 @@
     text-decoration: none;
     list-style: none;
 }
-html{
+
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
 }
-main{
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,12 +35,13 @@ main{
     margin-top: 100px;
     background: var(--blanco);
 }
-section{
+
+section {
     width: 100%;
 }
 
 /* ENCABEZADO */
-header{
+header {
     background-color: var(--blanco);
     width: 100%;
     display: flex;
@@ -49,79 +53,95 @@ header{
     top: 0;
     z-index: 3;
     border-bottom: 1px solid var(--gris);
-/* LOGO */
+    /* LOGO */
 }
-.logo{
+
+.logo {
     height: 80px;
     object-fit: scale-down;
 }
-.navbar .logo:hover{
+
+.navbar .logo:hover {
     filter: drop-shadow(0px -1px 2px rgb(125, 124, 124));
 }
+
 /* NAVBAR */
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
     max-width: 1400px;
 }
-.navbar-list{
+
+.navbar-list {
     display: flex;
 }
-.navbar-list li a{
+
+.navbar-list li a {
     font-size: 16px;
     color: var(--gris);
     padding: 6px 8px;
     display: block;
 }
-.navbar-list li a:hover{
+
+.navbar-list li a:hover {
     color: var(--rojo);
     font-weight: 600;
 }
+
 /* PRODUCTOS Y SERVICIOS DESTACADO */
-.navbar-list li:nth-child(3) a{
+.navbar-list li:nth-child(3) a {
     color: var(--rojo);
     font-weight: 600;
 }
-.navbar-list li:nth-child(3) li a{
+
+.navbar-list li:nth-child(3) li a {
     color: var(--gris);
 }
-.navbar-list li:nth-child(3) li a:hover{
+
+.navbar-list li:nth-child(3) li a:hover {
     color: var(--rojo);
 }
+
 /* FIN PROD Y SERV DESTACADO */
-.navbar-list li{
+.navbar-list li {
     float: left;
     position: relative;
     width: 130px;
     text-align: center;
     line-height: 25px;
 }
-.navbar-list li ul{
+
+.navbar-list li ul {
     display: none;
     position: absolute;
     min-width: 130px;
     background: var(--blanco);
 }
-.navbar-list li:hover > ul{
+
+.navbar-list li:hover>ul {
     display: block;
 }
+
 /* MENU HAMBURGUESA */
-.menu-icon{
+.menu-icon {
     color: var(--gris);
     font-size: 25px;
     transition: all 0.2s ease-in-out;
 }
-.menu-icon:hover{
+
+.menu-icon:hover {
     color: var(--rojo);
 }
+
 .menu-label,
-#menu-toggle{
+#menu-toggle {
     display: none;
 }
+
 /* OVERLAY */
-.overlay{
+.overlay {
     position: absolute;
     top: 100px;
     left: 0;
@@ -134,29 +154,30 @@ header{
 }
 
 /* HERO */
-#hero{
+#hero {
     background-image: url(./hero/frente\ ok.jpg);
     position: relative;
     height: calc(100vh - 100px);
     background-size: cover;
     background-position: center;
     background-color: #f5f5f5;
-    width: 100%;
     animation: banner 30s infinite ease-in-out;
 }
+
 /* BANNER */
-.banner-content{
+.banner-content {
     width: 100%;
     height: 100%;
-    color: #fff;
+    color: var(--blanco);
     background-color: rgba(0, 22, 40, .6);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 /* H1 */
-.banner-content h1{
+.banner-content h1 {
     font-size: 50px;
     text-align: center;
     padding-bottom: 30px;
@@ -164,16 +185,19 @@ header{
     text-shadow: -2px -2px 1px var(--negro);
     animation: translateY 3s forwards;
 }
-@keyframes translateY{
-    0%{
+
+@keyframes translateY {
+    0% {
         transform: translateY(-300px);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 }
+
 /* BOTON HERO */
-#hero .banner-content a{
+#hero .banner-content a {
     padding: 9px 20px;
     border: 1px solid var(--blanco);
     transition: all .3s ease-in-out;
@@ -181,63 +205,75 @@ header{
     border-radius: 1rem;
     animation: translatea 3s forwards;
 }
-@keyframes translatea{
-    0%{
+
+@keyframes translatea {
+    0% {
         transform: translateY(300px);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 }
-#hero .banner-content a:hover{
+
+#hero .banner-content a:hover {
     background-image: url(./prueba\ bg\ boton.webp);
     background-size: cover;
     background-position: center;
     color: var(--blanco);
-    transform: scale(1.1,1.1);
+    transform: scale(1.1, 1.1);
     transition: all 400ms ease-in-out;
     animation-direction: alternate;
 }
+
 /* ANIMACION IMGS HERO */
-@keyframes banner{
-    0%{
+@keyframes banner {
+    0% {
         background-image: url(./hero/frente\ ok.jpg);
     }
-    20%{
+
+    20% {
         background-image: url(./hero/frente\ ok.jpg);
     }
-    21%{
+
+    21% {
         background-image: url(./hero/mecanizados\ ok.jpg);
     }
-    40%{
+
+    40% {
         background-image: url(./hero/mecanizados\ ok.jpg);
     }
-    41%{
+
+    41% {
         background-image: url(./hero/Prueba\ de\ func\ 112358.jpg);
     }
-    60%{
+
+    60% {
         background-image: url(./hero/Prueba\ de\ func\ 112358.jpg);
     }
-    61%{
+
+    61% {
         background-image: url(./hero/ok1.jpg);
     }
-    80%{
+
+    80% {
         background-image: url(./hero/ok1.jpg);
     }
-    81%{
+
+    81% {
         background-image: url(./hero/20160407_103108.jpg);
     }
-    100%{
+
+    100% {
         background-image: url(./hero/20160407_103108.jpg);
     }
 }
 
 /* CONTACTANOS */
-#contactanos{
+#contactanos {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 150px;
     background-image: url(./bg4contacto.jpg);
     border-width: 3px;
@@ -247,10 +283,12 @@ header{
     border-radius: 1rem;
     margin-top: -12px;
 }
-#contactanos .banner-content{
+
+#contactanos .banner-content {
     border-radius: 1rem;
 }
-.contactanos{
+
+.contactanos {
     display: flex;
     max-width: 1400px;
     align-items: center;
@@ -258,15 +296,17 @@ header{
     gap: 13px;
     margin: 0 7px;
 }
-.contactanos p{
+
+.contactanos p {
     font-size: 26px;
     color: var(--blanco);
     font-style: italic;
     font-weight: 500;
     text-shadow: 3px 3px 2px var(--rojo);
 }
+
 /* CONTACTANOS BOTON */
-.contactanos a{
+.contactanos a {
     padding: 9px 20px;
     border: 2px solid var(--bg-footer);
     background-image: url(./prueba\ bg\ boton.webp);
@@ -280,28 +320,27 @@ header{
     transition: all .3s ease-in-out;
     text-shadow: 2px 2px 2px var(--bg-negro);
 }
-.contactanos a:hover{
+
+.contactanos a:hover {
     text-shadow: -3px -3px 3px var(--bg-negro);
 }
 
 /* NOSOTROS */
-#ingenieria-control h2{
-    text-shadow: 3px 3px 2px var(--bg-negro);
-}
 #contacto h2,
 #servicios h2,
 #hero .banner-content a,
 .ingenieria h3,
-.calidad h3{
+.calidad h3 {
     text-shadow: 3px 3px 2px var(--rojo);
 }
-#hero .banner-content a{
-text-shadow: 2px 2px 2px var(--negro);
+
+#hero .banner-content a {
+    text-shadow: 2px 2px 2px var(--negro);
 }
-#nosotros{
+
+#nosotros {
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: space-evenly;
     align-items: center;
     height: 800px;
@@ -309,7 +348,7 @@ text-shadow: 2px 2px 2px var(--negro);
     margin-top: -12px;
 }
 
-.background{
+.background {
     background-image: url(./bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -319,9 +358,10 @@ text-shadow: 2px 2px 2px var(--negro);
     top: 0;
     width: 100%;
 }
+
 /* EMPRESA */
-.empresa{
-    max-width: 1200px;
+.empresa {
+    max-width: 1400px;
     text-align: justify;
     border-start-start-radius: 200px;
     border-start-end-radius: 200px;
@@ -335,25 +375,29 @@ text-shadow: 2px 2px 2px var(--negro);
     flex-direction: column;
     justify-content: center;
 }
+
 .empresa h2,
 .clientes h2,
 #servicios h2,
 #ingenieria-control h2,
-#contacto h2{
+#contacto h2 {
     text-align: center;
     padding: 10px 0;
     font-size: 40px;
     color: var(--bg-gris);
 
 }
-.clientes h2{
+
+.clientes h2 {
     color: var(--gris);
 }
-.empresa h2{
+
+.empresa h2 {
     color: var(--blanco);
     text-shadow: 3px 3px 2px var(--rojo);
 }
-.empresa p{
+
+.empresa p {
     padding: 30px 60px;
     font-size: 20px;
     font-weight: 600;
@@ -361,8 +405,9 @@ text-shadow: 2px 2px 2px var(--negro);
     text-align: justify;
     letter-spacing: 2px;
 }
+
 /* CLIENTES */
-.clientes{
+.clientes {
     max-width: 1400px;
     align-items: center;
     border-start-start-radius: 1rem;
@@ -375,48 +420,52 @@ text-shadow: 2px 2px 2px var(--negro);
     width: 60%;
     box-shadow: -6px 0px 18px 4px var(--bg-negro);
 }
-.img{
+
+.img {
     display: flex;
     padding: 30px 50px;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
 }
-.clientes img{
+
+.clientes img {
     width: 100px;
     height: 70px;
     object-fit: contain;
 }
 
 /* SERVICIOS */
-#servicios{
+#servicios {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     background-image: url(./bg4contacto.jpg);
     background-position: center;
     background-size: cover;
 }
-#servicios h2{
+
+#servicios h2 {
     color: var(--bg-gris);
     padding: 40px 0;
 }
+
 /* PRODUCTOS */
-.products-container{
+.products-container {
     display: flex;
     gap: 7.5px;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 15px;
-    max-width: 1200px;
+    max-width: 1400px;
     background: var(--bg-gris);
     padding: 100px 0;
     margin-bottom: 70px;
     border-radius: 50%;
 }
-.product{
+
+.product {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--bg-gris);
@@ -430,21 +479,26 @@ text-shadow: 2px 2px 2px var(--negro);
     position: relative;
     z-index: 1;
 }
-.product:hover h3{
+
+.product:hover h3 {
     text-shadow: 0px 6px 5px var(--rojo-rgba);
 }
-.mecanizados:hover{
+
+.mecanizados:hover {
     box-shadow: -12px 12px 18px -4px var(--rojo);
 }
-.transmisiones:hover{
+
+.transmisiones:hover {
     box-shadow: 12px -12px 18px -4px var(--rojo);
 }
-.transportadores:hover{
+
+.transportadores:hover {
     box-shadow: 12px 12px 18px -4px var(--rojo);
 }
+
 .product::after,
 .ingenieria::after,
-.calidad::after{
+.calidad::after {
     content: "";
     position: absolute;
     top: 0;
@@ -455,32 +509,36 @@ text-shadow: 2px 2px 2px var(--negro);
     z-index: -1;
     border-radius: 1rem;
 }
+
 .product h3,
 .ingenieria h3,
-.calidad h3{
+.calidad h3 {
     color: var(--blanco);
     font-size: 33px;
     font-weight: 900;
     letter-spacing: 3px;
 }
+
 .product ul,
 .ingenieria ul,
-.calidad ul{
+.calidad ul {
     justify-content: center;
     text-align: center;
     align-items: center;
 }
+
 .product ul li,
 .ingenieria ul li,
-.calidad ul li{
+.calidad ul li {
     font-size: 22px;
     font-weight: 500;
     color: var(--blanco);
     text-align: center;
     line-height: 28px;
 }
+
 /* PRODUCT BOTON */
-.product button{
+.product button {
     background: none;
     border: 2px solid var(--blanco);
     padding: 10px 35px;
@@ -492,33 +550,37 @@ text-shadow: 2px 2px 2px var(--negro);
     transition: all 400ms ease-in-out;
 
 }
-.product button:hover{
+
+.product button:hover {
     background-image: url(./prueba\ bg\ boton.webp);
     background-size: cover;
     background-position: center;
     transition: all 400ms ease-in-out;
 }
+
 /* MECANIZADOS */
-.mecanizados{
+.mecanizados {
     background-image: url(./Mecanizados/PIÑON\ Z23\ MN25\ mec\ bg.jpg);
     background-size: cover;
     background-position: center;
 }
+
 /* TRANSMISIONES */
-.transmisiones{
+.transmisiones {
     background-image: url(./Transmisiones/Tren\ de\ engranajes\ 6\ transm\ bg.jpg);
     background-size: cover;
     background-position: center;
 }
+
 /* TRANSPORTADORES */
-.transportadores{
+.transportadores {
     background-image: url(./Transportadores/transportadora\ ok.jpg);
     background-size: cover;
     background-position: center;
 }
 
 /* INGENIERIA Y CONTROL*/
-#ingenieria-control{
+#ingenieria-control {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -528,19 +590,21 @@ text-shadow: 2px 2px 2px var(--negro);
     background-size: cover;
     background-position: center;
 }
+
 /* INGENIERIA */
-.ing-control{
+.ing-control {
     display: flex;
     flex-direction: column;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     min-height: 1041px;
     width: 100%;
 }
-.background-2{
+
+.background-2 {
     background-image: url(./bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -550,15 +614,10 @@ text-shadow: 2px 2px 2px var(--negro);
     width: 100%;
     display: flex;
 }
-#ingenieria-control h2{
-    color: var(--bg-gris);
-    z-index: 2;
-    padding: 40px 0;
-    text-shadow: 0px 6px 5px var(--rojo-rgba);
-}
+
 /* CALIDAD */
 .ingenieria,
-.calidad{
+.calidad {
     display: flex;
     flex-direction: column;
     width: 590px;
@@ -575,64 +634,72 @@ text-shadow: 2px 2px 2px var(--negro);
     padding: 30px 35px;
     border: 1px solid var(--blanco);
 }
+
 .ingenieria:hover,
-.calidad:hover{
-    transform: scale(1.05,1.05);
+.calidad:hover {
+    transform: scale(1.05, 1.05);
     transition: all 300ms ease-out;
     animation-direction: alternate;
 }
-.ingenieria{
+
+.ingenieria {
     margin-top: 60px;
 }
-.calidad{
+
+.calidad {
     margin-bottom: 60px;
 }
-.calidad ul{
+
+.calidad ul {
     display: flex;
     flex-direction: column;
     gap: 23px;
     align-items: flex-start;
 }
-.ingenieria ul{
+
+.ingenieria ul {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
 /* CONTACTO */
-#contacto{
+#contacto {
     display: flex;
     flex-direction: column;
     background-image: url(./bg4contacto.jpg);
     background-position: center;
     background-size: cover;
-    width: 100%;
     justify-content: center;
     align-items: center;
 }
-#contacto .banner-content{
+
+#contacto .banner-content {
     border-radius: 1rem;
 }
-#contacto h2{
+
+#contacto h2 {
     font-size: 40px;
     font-weight: 600;
     color: var(--blanco);
     padding: 40px 0;
 }
-#contacto p{
+
+#contacto p {
     font-size: 25px;
     color: var(--bg-footer);
     text-align: center;
     padding: 0 23px 30px 23px;
 }
+
 /* DATOS */
-.datos-container{
+.datos-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 95%;
-    max-width: 1200px;
+    max-width: 1400px;
     background-image: url(./contacto4.jpg);
     background-position: center;
     background-size: cover;
@@ -640,8 +707,9 @@ text-shadow: 2px 2px 2px var(--negro);
     border: 2px solid var(--bg-gris);
     margin-bottom: 50px;
 }
+
 /* DIV DATOS */
-.datos{
+.datos {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -651,24 +719,27 @@ text-shadow: 2px 2px 2px var(--negro);
     width: 100%;
     gap: 30px;
 }
-.datos-container h3{
+
+.datos-container h3 {
     color: var(--blanco);
     font-size: 32px;
     padding: 40px 0;
     text-align: center;
     text-shadow: 2px 2px 2px var(--negro);
 }
-.datos ul h4{
+
+.datos ul h4 {
     color: var(--blanco);
     font-size: 25px;
     padding-bottom: 16px;
     text-shadow: 3px 3px 2px var(--rojo-rgba);
-
 }
-.datos ul li i{
+
+.datos ul li i {
     text-shadow: -2px -3px 1px var(--rojo-rgba);
 }
-.datos ul{
+
+.datos ul {
     padding: 30px;
     background: var(--gris);
     width: 380px;
@@ -679,40 +750,47 @@ text-shadow: 2px 2px 2px var(--negro);
     display: flex;
     flex-direction: column;
 }
-.direccion ul{
+
+.direccion ul {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     border: solid 2px var(--bg-gris);
     box-shadow: 0px -5px 12px 3px var(--gris-rgba);
 }
-.mail ul{
+
+.mail ul {
     border: solid 2px var(--bg-gris);
     box-shadow: 0px 0px 12px 3px var(--gris-rgba);
 }
-.telefono ul{
+
+.telefono ul {
     border: solid 2px var(--bg-gris);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     box-shadow: 0px 5px 12px 3px var(--gris-rgba);
 }
-.datos ul li{
+
+.datos ul li {
     font-size: 20px;
 }
+
 .direccion,
 .mail,
-.telefono{
+.telefono {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 120px;
 }
+
 /* MAPA */
-iframe{
+iframe {
     height: 100%;
     width: 100%;
 }
-.mapa{
+
+.mapa {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -723,8 +801,9 @@ iframe{
     margin: 70px 0;
     border: 3px solid var(--gris);
 }
+
 /* PIE DE PAGINA */
-footer{
+footer {
     background: var(--negro);
     color: var(--blanco);
     display: flex;
@@ -736,10 +815,10 @@ footer{
 
 
 /* MEDIAQUERIES */
-@media (max-width: 992px){
+@media (max-width: 992px) {
 
     /* NAVBAR */
-    .navbar-list{
+    .navbar-list {
         position: absolute;
         top: 100px;
         left: 5%;
@@ -759,284 +838,339 @@ footer{
         justify-content: center;
         height: calc(92vh - 100px);
     }
-    .navbar-list li ul{
+
+    .navbar-list li ul {
         display: none;
         left: 130px;
         top: 0px;
         padding: 0 15px;
     }
-    .navbar-list li ul{
+
+    .navbar-list li ul {
         border-left: 1px solid var(--rojo);
         margin-top: -23px;
         background: unset;
     }
-    .navbar-list li a{
+
+    .navbar-list li a {
         color: var(--blanco);
     }
 
     /* MENU HAMBURGUESA */
-    .menu-label{
+    .menu-label {
         display: flex;
         cursor: pointer;
         order: 2;
     }
-    #menu-toggle:checked ~ .navbar-list{
+
+    #menu-toggle:checked~.navbar-list {
         display: flex;
     }
-    #menu-toggle:checked ~ .overlay{
+
+    #menu-toggle:checked~.overlay {
         display: block;
     }
 
     /* MAIN */
-    main{
+    main {
         padding-top: unset;
     }
 
     /* HERO */
-    #hero{
+    #hero {
         height: calc(100vh - 100px);
         animation: none;
     }
+
     #hero,
-    .banner-content{
+    .banner-content {
         border-radius: unset;
     }
 
     /* CONTACTANOS */
-    #contactanos{
+    #contactanos {
         gap: 3px;
     }
-    .contactanos{
-        gap: unset;
+
+    .contactanos {
+        gap: 5px;
     }
-    .contactanos p{
+
+    .contactanos p {
         font-size: 25px;
         padding: unset;
     }
-    .contactanos a{
+
+    .contactanos a {
         font-size: 25px;
     }
-    
+
     /* NOSOTROS */
-    #nosotros{
+    #nosotros {
         padding: 0 20px;
         border-start-start-radius: 150px;
         border-start-end-radius: 150px;
     }
-    .empresa h2{
+
+    .empresa h2 {
         padding-top: 12px;
     }
-    .clientes h2{
+
+    .clientes h2 {
         padding: 5px 5px 15px 0;
     }
+
     .empresa p,
-    .clientes .img{
+    .clientes .img {
         font-size: 20px;
         padding: 15px 30px;
     }
-    .empresa p{
+
+    .empresa p {
         padding: 10px 30px;
         font-size: 16px;
     }
 
     /* SERVICIOS */
-    .products-container{
-        margin: 10px;
+    .products-container {
+        /* margin: 10px; */
+        background: unset;
+        padding: unset;
+        padding-bottom: 30px;
     }
-    .product{
+
+    .product {
         max-width: 90%;
     }
-    .transmisiones:hover{
+
+    .transmisiones:hover {
         box-shadow: 12px 12px 18px -4px var(--rojo);
     }
 
     /* ING-CONTROL */
     .ingenieria,
-    .calidad{
+    .calidad {
         max-width: 90%;
         height: unset;
     }
-    .background-2{
-        min-height: 1180px;
+
+    .ing-control {
+        height: 1400px;
+        gap: 90px;
+    }
+
+    .background-2 {
+        height: 1400px;
     }
 
     /* CONTACTO */
-    .datos-container{
+    .datos-container {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 60px;
         width: 100%;
     }
-    .datos{
+
+    .datos {
         gap: 20px;
         align-items: center;
         width: unset;
         max-width: 90%;
         padding-left: unset;
     }
+
     .datos h4,
-    .datos ul li{
+    .datos ul li {
         text-align: center;
     }
-    .datos ul{
+
+    .datos ul {
         padding-left: 42px;
     }
 
     /* FOOTER */
-    footer{
+    footer {
         gap: 30px;
     }
 }
 
-@media (max-width: 576px){
+@media (max-width: 576px) {
 
     /* MAIN */
-    main{
+    main {
         margin-top: 100px;
     }
 
     /* NAVBAR */
-    .navbar-list{
+    .navbar-list {
         left: 0;
         width: 100%;
         border: none;
         height: calc(100vh - 100px);
         border-radius: unset;
-        
+
     }
-    .navbar-list li ul{
+
+    .navbar-list li ul {
         left: 0;
         top: 62px;
         padding: unset;
     }
-    .navbar-list li:hover > ul{
+
+    .navbar-list li:hover>ul {
         display: none;
     }
 
     /* HERO */
-    #hero{
+    #hero {
         display: none;
     }
-   
+
     /* CONTACTANOS */
-    #contactanos{
+    #contactanos {
         display: none;
     }
 
     /* NOSOTROS */
-    #nosotros{
+    #nosotros {
         padding: 0 5px;
         height: 812px;
     }
-    #nosotros .background{
+
+    #nosotros .background {
         height: 812px;
     }
+
     /* EMPRESA */
-    .empresa{
+    .empresa {
         justify-content: flex-start;
         border-radius: unset;
         height: auto;
     }
-    .empresa{
+
+    .empresa {
         margin-top: 8px;
         width: 96%;
     }
-    .empresa p{
+
+    .empresa p {
         font-size: 16px;
         text-align: center;
         padding: 10px 47px;
     }
+
     /* CLIENTES */
-    .clientes{
+    .clientes {
         width: 86%;
         height: 218px;
-    }    
-    .clientes h2{
+    }
+
+    .clientes h2 {
         padding: 10px 0;
     }
 
     /* SERVICIOS */
-    .products-container{
+    .products-container {
         margin-bottom: 45px;
         background: none;
         gap: 22px;
         padding: unset;
     }
-    .product{
+
+    .product {
         max-width: 300px;
         height: auto;
         padding: 30px 5px;
     }
-    .product h2{
+
+    .product h2 {
         letter-spacing: unset;
         font-size: 10px;
     }
-    #servicios h3{
+
+    #servicios h3 {
         font-size: 25px;
     }
-    #servicios ul li{
+
+    #servicios ul li {
         font-size: 20px;
     }
-    .mecanizados:hover{
+
+    .mecanizados:hover {
         box-shadow: 12px 12px 18px -4px var(--rojo);
     }
 
     /* INGENIERIA-CONTROL */
-    .background-2{
+    .ing-control {
+        height: unset;
+        gap: 20px;
+    }
+
+    .background-2 {
         min-height: 1147px;
         background-image: none;
     }
+
     .ingenieria,
-    .calidad{
+    .calidad {
         width: 98%;
         padding: 15px 20px;
     }
-    .ingenieria{
+
+    .ingenieria {
         margin-top: 45px;
     }
-    .calidad{
+
+    .calidad {
         margin-bottom: 45px;
     }
-    .ingenieria-list{
+
+    .ingenieria-list {
         gap: 15px;
     }
-    .calidad ul{
+
+    .calidad ul {
         gap: 12px;
     }
 
     /* CONTACTO */
-    .datos-container h3{
+    .datos-container h3 {
         font-size: 20px;
     }
-    .datos{
+
+    .datos {
         margin-bottom: 30px;
     }
-    .datos ul{
+
+    .datos ul {
         padding: unset;
         width: 280px;
     }
-    .datos ul li{
+
+    .datos ul li {
         font-size: 16px;
     }
-    .mapa{
+
+    .mapa {
         display: none;
     }
 
     /* FOOTER */
-    footer{
+    footer {
         flex-direction: column;
         gap: unset;
         padding: 0 5px 10px 5px;
     }
-    footer img{
+
+    footer img {
         width: 100px;
         object-fit: scale-down;
         padding-top: 3px;
     }
-    footer p{
+
+    footer p {
         text-align: center;
     }
 
 }
-
