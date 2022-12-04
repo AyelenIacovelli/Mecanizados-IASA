@@ -1,2 +1,2 @@
 # Mecanizados-IASA
-Link Vercel: https://github.com/AyelenIacovelli/Mecanizados-IASA.git
+Link Vercel: mecanizados-iasa.vercel.app
